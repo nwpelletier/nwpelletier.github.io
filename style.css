@@ -51,8 +51,8 @@ li {
   box-shadow: -2px 2px 2px rgb(4, 34, 44), -4px 4px 2px rgb(21, 100, 120);
   border-radius: 9px;
   overflow: hidden;
-  filter:contrast(80%);
-  filter:grayscale(30%);
+  /* filter:contrast(80%); */
+  /* filter:grayscale(30%); */
 }
 
 .portfolio-image:hover {
