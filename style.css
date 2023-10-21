@@ -22,20 +22,6 @@ li {
   width: 100vw;
   height: 100vh;
   opacity: calc(50%);
-  background: repeating-linear-gradient(45deg, rgb(255, 255, 255), rgb(216, 226, 230) 2px, rgb(233, 233, 233) 2px);
-  margin: 0;
-  padding: 0;
-}
-
-.background-gradient-2 {
-  position: fixed;
-  z-index: -2;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  opacity: calc(50%);
-  background: repeating-linear-gradient(80deg, rgb(255, 255, 255), rgb(197, 201, 210) 2px, rgb(233, 233, 233) 2px);
   margin: 0;
   padding: 0;
 }
@@ -77,9 +63,8 @@ li {
 }
 
 .inner-box {
-  border: 2px solid rgb(139, 139, 139);
-  background: radial-gradient(rgb(222, 222, 222), rgb(255, 255, 255));
-  border-radius: 8px;
+  border: 2px solid rgb(22, 39, 114);
+  border-radius: 3px;
   overflow-y: auto;
 }
 
@@ -114,9 +99,9 @@ li {
   color: rgb(231, 234, 238);
 }
 
-.embed-pdf {
-  border-radius: 6px;
-}
+/* .embed-pdf {
+  border-radius: 2px;
+} */
 
 .top-nav-box {
   display: none;
