@@ -81,6 +81,7 @@ a {
 
 .test-bg {
   /* background-color:grey; */
+  z-index:100;
   padding-top: 60px;
   font-size: 30px;
   font-family: monospace;
@@ -90,6 +91,10 @@ a {
   font-family: monospace;
   font-size: 3em;
   font-weight: lighter !important
+}
+
+.home-info-text {
+  font-size:16px;
 }
 
 .project-box {
