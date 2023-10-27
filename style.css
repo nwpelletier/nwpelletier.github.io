@@ -89,7 +89,7 @@ a {
 
 .reinforced-text {
   text-shadow:2px 2px 3px #3f5763, 1px 1px 1px #5a3038 ;
-  font-size:20px;
+  font-size:26px;
 }
 
 .background-gradient {
@@ -166,12 +166,25 @@ a {
 }
 
 .home-info-text {
-  font-size: 16px;
+  font-family:monospace;
+  font-size: 19px;
+}
+
+.home-contact-info {
+  background-color:white;
+  border:1px solid rgb(199, 199, 199);
+  border-radius:4px;
+  color:rgb(94, 94, 94);
+  text-shadow:-1px 1px 1px black;
+  font-size:14px;
+  display:inline-block;
+  padding-right:25px;
+  padding-top:12px;
 }
 
 .project-box {
   border: 1px solid rgb(205, 205, 219);
-  box-shadow:2px 2px 3px rgb(70, 81, 92), -2px -2px 3px rgb(70, 81, 92);
+  box-shadow:2px 2px 2px rgb(70, 81, 92), -2px -2px 2px rgb(70, 81, 92);
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
   margin-top: 2em;
@@ -233,7 +246,7 @@ a {
 }
 
 .inner-box {
-  background: repeating-linear-gradient(0deg, #ffffff, #e9eaee, #ffffff 0.8%);
+  background: repeating-linear-gradient(0deg, #ffffff, #e9eaee, #ffffff 0.1%);
 }
 
 .nav-current {
