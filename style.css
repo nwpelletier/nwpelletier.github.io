@@ -241,14 +241,14 @@ a {
 
 .inner-box {
   border: 2px solid rgb(127, 128, 158);
-  box-shadow:-1px 0px 2px rgb(65, 65, 65), 0px 2px 2px black;
+  box-shadow:-1px 0px 2px rgb(65, 65, 65);
   border-radius: 8px;
   overflow-y: auto;
   overflow-x: hidden;
 }
 
 .inner-box {
-  background: repeating-linear-gradient(0deg, #ffffff, #e9eaee, #ffffff 0.1%);
+  background: repeating-linear-gradient(0deg, #ebeeef, #eceff7, #ffffff 0.1%);
 }
 
 .nav-current {
