@@ -12,201 +12,169 @@
 </head>
 
 <body>
-  <div class="background-gradient"></div>
-  <div class="background-gradient-2"></div>
-  <div class="d-flex vh-100 align-items-center">
-    <div class="top-nav-box d-flex justify-content-around align-items-center">
-      <a class="nav-item nav-current nav-link">/home</a>
-      <a class="nav-item nav-link">/projects</a>
-      <a class="nav-item nav-link">/resume</a>
-      <!-- <a class="nav-item nav-link">/contact</a> -->
-    </div>
-    <div class="container-fluid">
-      <div class="row">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      const theme = localStorage.getItem("theme");
+      console.log(theme);
+      if (theme === "dark") {
+        setDarkTheme();
+      }
+    });
+  </script>
 
 
 
-
-
-
-
-        <!-- ==-======= -->
-        <!-- LEFT NAVBAR -->
-        <!-- ========== -->
-        <div class="col-md-2 offset-1 d-flex left-box justify-content-end gx-2">
-          <div class="nav-item-box align-self-center">
-            <a class="nav-item nav-current nav-link">/home</a>
-            <a class="nav-item nav-link">/projects</a>
-            <a class="nav-item nav-link">/resume</a>
-            <!-- <a class="nav-item nav-link">/contact</a> -->
+  <div id="mainDiv" class="">
+    <div class="page-background"></div>
+    <div class="d-flex vh-100 align-items-center">
+      <div class="top-nav-box d-flex justify-content-around align-items-center">
+        <a class="nav-item nav-current nav-link">/home</a>
+        <a class="nav-item nav-link">/projects</a>
+        <a class="nav-item nav-link">/resume</a>
+        <!-- <a class="nav-item nav-link">/contact</a> -->
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <!-- ==-======= -->
+          <!-- LEFT NAVBAR -->
+          <!-- ========== -->
+          <div class="col-md-2 offset-1 d-flex left-box justify-content-end gx-2">
+            <div class="nav-item-box align-self-center">
+              <a class="nav-item nav-current nav-link">/home</a>
+              <a class="nav-item nav-link">/projects</a>
+              <a class="nav-item nav-link">/resume</a>
+              <div id="subDiv">
+                <button onclick="setDarkTheme()">Dark</button>
+                <button onclick="setLightTheme()">Light</button>
+              </div>
+              <!-- <a class="nav-item nav-link">/contact</a> -->
+            </div>
           </div>
-        </div>
-
-
-
-
-
-        <!-- BOXES -->
-        <div class="col-md-6 col-12 middle-box gx-2">
-          <div class="inner-box h-100">
-
-
-
-
-
-
-            <!-- ========= -->
-            <!-- HOME PAGE -->
-            <!-- ========= -->
-            <div class="home-shtuff row justify-content-end" style="display:show">
-
-
-              <div class="col-12">
-                <div class="test-bg col-12 text-center gx-0 my-4"></div>
-                <div class="photo-container">
-                  <a><img src="./files/photo.png" width="86%" </a>
-                </div>
-              </div>
-
-
-              <div class="col-12" style="background-color:none">
-                <div class="home-info-header col-8 py-4 mt-5 mx-5">hi</div>
-
-
-              </div>
-              <div class="home-info-text col-12">
-                <div class=" col-11 mx-5 ">
-                  <div class="justify-all-text">
-                    <p> My name is  <span class="reinforced-text">Nick Pelletier</span> and I am a current
-                      Full Stack student at John Abbott College in Montreal, aiming to finish in January
-                      2024. I am currently seeking Internship/Stage in Full Stack or Front End</p>
-                    <p class="hide-when-small">
-                      My professional background is in Film Production (ILM), Music and Sound
-                      Recording (Mcgill). These
-                      experiences over the last seven years have inspired me to continue learning new tools and
-                      technologies.
-                    </p>
-                    <p>
-                      If you'd like to connect, you can reach me at any
-                      of the following:
-                    </p>
+          <!-- BOXES -->
+          <div class="col-md-6 col-12 middle-box gx-2">
+            <div class="inner-box h-100">
+              <!-- ========= -->
+              <!-- HOME PAGE -->
+              <!-- ========= -->
+              <div class="home-shtuff row justify-content-end" style="display:show">
+                <div class="col-12">
+                  <div class="test-bg col-12 text-center gx-0 my-4"></div>
+                  <div class="photo-container">
+                    <a><img src="./files/photo.png" width="86%" </a>
                   </div>
-                  <div class="home-contact-info">
-                    <ul style="list-style-type:none;">
-                      <li>nickw.pelletier@gmail.com</li>
-                      <li>1(438)680-1479</li>
-                      <li>---</li>
-                      <li>Nick Pelletier</li>
-                      <li>404-2011 Avenue Joly</li>
-                      <li>Montreal, QC H2X3H1</li>
-                    </ul>
-                  </div>
-                  <br>
                 </div>
-              </div>
-            </div>
-
-
-
-
-
-
-
-
-            <!-- ======== -->
-            <!-- PROJECTS -->
-            <!-- ======== -->
-            <div class="projects-shtuff container projects-bg" style="display:none;">
-              <div class="row gx-5 test-2 justify-content-center" style="height:100%">
-
-
-
-
-                <!-- CRUDDIT -->
-                <div class="project-box col-10">
-                  <div class="col-12 d-flex flex-column mt-5 align-items-center justify-content-center">
-                    <p class="ul-heading-big text-center">Cruddit (Reddit Clone)</p>
-                    <div id="image-cruddit" class="portfolio-image">
-                      <a href="https://sleepy-wave-79440-e840c0381b67.herokuapp.com/" target="_blank">
-                        <img src="./files/cruddit.png" class="img-fluid" style="object-fit: cover;"
-                          alt="Screenshot of Cruddit Web-App">
-                      </a>
+                <div class="col-12" style="background-color:none">
+                  <div class="home-info-header col-8 py-4 mt-5 mx-5">hi</div>
+                </div>
+                <div class="home-info-text col-12">
+                  <div class=" col-11 mx-5 ">
+                    <div class="justify-all-text">
+                      <p> My name is <span class="reinforced-text">Nick Pelletier</span> and I am a current
+                        Full Stack student at John Abbott College in Montreal, aiming to finish in January
+                        2024. I am currently seeking Internship/Stage in Full Stack or Front End</p>
+                      <p class="hide-when-small">
+                        My professional background is in Film Production (ILM), Music and Sound
+                        Recording (Mcgill). These
+                        experiences over the last seven years have inspired me to continue learning new tools and
+                        technologies.
+                      </p>
+                      <p>
+                        If you'd like to connect, you can reach me at any
+                        of the following:
+                      </p>
                     </div>
+                    <div class="home-contact-info">
+                      <ul style="list-style-type:none;">
+                        <li>nickw.pelletier@gmail.com</li>
+                        <li>1(438)680-1479</li>
+                        <li>---</li>
+                        <li>Nick Pelletier</li>
+                        <li>404-2011 Avenue Joly</li>
+                        <li>Montreal, QC H2X3H1</li>
+                      </ul>
+                    </div>
+                    <br>
                   </div>
-                  <div class="col-12">
-                    <div class="row justify-content-center">
-                      <div class="col-11 text-align-center">
-                        <ul class="ul-heading-small">
-                          <li class="reinforced-line">React| Node JS | AWS RDS/S3 | MySQL | Javascript | Sequelize |
-                            HTML
-                            | CSS
-                          </li>
-                          <li>Using 'CRUD' operations, our project is inspired by Old Reddit. I worked primarily on
-                            React components, assets, and front-end design/layout</li>
-                          <li><a
-                              href="https://github.com/nwpelletier/web-development2-final/tree/main/PracticeApisToRelax"
-                              target="_blank">Github</a>
-                          </li>
-                          <li>Team: Nick Pelletier, Alex Franklin, Ehsan Motlagh</li>
-                        </ul>
+                </div>
+              </div>
+              <!-- ======== -->
+              <!-- PROJECTS -->
+              <!-- ======== -->
+              <div class="projects-shtuff container projects-bg" style="display:none;">
+                <div class="row gx-5 test-2 justify-content-center" style="height:100%">
+                  <!-- CRUDDIT -->
+                  <div class="project-box col-10">
+                    <div class="col-12 d-flex flex-column mt-5 align-items-center justify-content-center">
+                      <p class="ul-heading-big text-center">Cruddit (Reddit Clone)</p>
+                      <div id="image-cruddit" class="portfolio-image">
+                        <a href="https://sleepy-wave-79440-e840c0381b67.herokuapp.com/" target="_blank">
+                          <img src="./files/cruddit.png" class="img-fluid" style="object-fit: cover;"
+                            alt="Screenshot of Cruddit Web-App">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="row justify-content-center">
+                        <div class="col-11 text-align-center">
+                          <ul class="ul-heading-small">
+                            <li class="reinforced-line">React| Node JS | AWS RDS/S3 | MySQL | Javascript | Sequelize |
+                              HTML
+                              | CSS
+                            </li>
+                            <li>Using 'CRUD' operations, our project is inspired by Old Reddit. I worked primarily on
+                              React components, assets, and front-end design/layout</li>
+                            <li><a
+                                href="https://github.com/nwpelletier/web-development2-final/tree/main/PracticeApisToRelax"
+                                target="_blank">Github</a>
+                            </li>
+                            <li>Team: Nick Pelletier, Alex Franklin, Ehsan Motlagh</li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-
-
-
-
-                <!-- BLACKJACK -->
-                <div class="project-box col-10">
-                  <div class="col-12 d-flex flex-column mt-5 align-items-center justify-content-center">
-                    <p class="ul-heading-big">Blackjack Web Game:</p>
-                    <div id="image-blackjack" class="portfolio-image">
-                      <a href="./blackjack-game/index.html" target="_blank">
-                        <img src="./files/blackjack.png" class="img-fluid" style="object-fit: cover;"
-                          alt="Screenshot of Blackjack Web-App">
-                      </a>
+                  <!-- BLACKJACK -->
+                  <div class="project-box col-10">
+                    <div class="col-12 d-flex flex-column mt-5 align-items-center justify-content-center">
+                      <p class="ul-heading-big">Blackjack Web Game:</p>
+                      <div id="image-blackjack" class="portfolio-image">
+                        <a href="./blackjack-game/index.html" target="_blank">
+                          <img src="./files/blackjack.png" class="img-fluid" style="object-fit: cover;"
+                            alt="Screenshot of Blackjack Web-App">
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="row justify-content-center">
-                      <div class="col-11 text-align-center">
-                        <ul class="ul-heading-small">
-                          <li class="reinforced-line">HTML | CSS | Javascript | jQuery | Bootstrap</li>
-                          <li>I worked primarily on allocation and implementation of assets (image/sound), logic for
-                            deck shuffler, and general JS/jQuery coding</li>
-                          <li><a href="https://github.com/nwpelletier/nwpelletier.github.io/tree/main/blackjack-game"
-                              style="font-weight:bold" target="_blank">Github</a>
-                          </li>
-                          <li>Team: Nick Pelletier, Meredith White, Hilal Karappan</li>
-
-                        </ul>
+                    <div class="col-12">
+                      <div class="row justify-content-center">
+                        <div class="col-11 text-align-center">
+                          <ul class="ul-heading-small">
+                            <li class="reinforced-line">HTML | CSS | Javascript | jQuery | Bootstrap</li>
+                            <li>I worked primarily on allocation and implementation of assets (image/sound), logic for
+                              deck shuffler, and general JS/jQuery coding</li>
+                            <li><a href="https://github.com/nwpelletier/nwpelletier.github.io/tree/main/blackjack-game"
+                                style="font-weight:bold" target="_blank">Github</a>
+                            </li>
+                            <li>Team: Nick Pelletier, Meredith White, Hilal Karappan</li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-
-
-
-
-
-
-
-
-            <!-- ========== -->
-            <!-- RESUME PDF -->
-            <!-- ========== -->
-            <div class="resume-shtuff" style="display:none; width: 100%; height: 99%;">
-              <embed class="embed-pdf" src="./files/npelletier-resume.pdf" type="application/pdf" width="100%"
-                height="100%" />
+              <!-- ========== -->
+              <!-- RESUME PDF -->
+              <!-- ========== -->
+              <div class="resume-shtuff" style="display:none; width: 100%; height: 99%;">
+                <embed class="embed-pdf" src="./files/npelletier-resume.pdf" type="application/pdf" width="100%"
+                  height="100%" />
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
   </div>
 
 
@@ -218,7 +186,6 @@
   <!-- ======= -->
   <!-- SCRIPTS -->
   <!-- ======= -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
     // On document load
     // On document load
@@ -248,6 +215,20 @@
       $('.top-nav-box .nav-item').click(switchContent);
     });
 
+
+
+    // Dark/Light Toggle
+    function setDarkTheme() {
+      const mainDiv = document.getElementById('mainDiv');
+      $(mainDiv).addClass('dark');
+      localStorage.setItem("theme", "dark");
+    }
+
+    function setLightTheme() {
+      const mainDiv = document.getElementById('mainDiv');
+      $(mainDiv).removeClass('dark');
+      localStorage.setItem("theme", "");
+    }
   </script>
 
 
