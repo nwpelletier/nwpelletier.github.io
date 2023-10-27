@@ -352,6 +352,42 @@ a {
   z-index: 1000;
 }
 
+.button-dark, .button-light {
+  border:none;
+  padding-bottom:2px;
+  border-radius:4px;
+}
+
+.button-light {
+  background-color:var(--nav-text-bg);
+  border:2px dashed #000000;
+  color:#ffffff;
+}
+
+.dark .button-light {
+  background:none;
+  border:none;
+  color:#c2c2c2;
+}
+
+.dark .button-dark {
+  background-color:var(--nav-text-bg);
+  border:2px dashed #ffffff;
+  color:#ffffff;
+}
+
+.button-dark {
+  color:var(--col-accent);
+}
+
+.subDiv {
+  margin-top:20px;
+}
+
+.top-button {
+  font-size: 10px !important;
+}
+
 @media (max-width: 768px) {
   .nav-item-box {
     display: none;
