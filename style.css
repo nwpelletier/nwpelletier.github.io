@@ -1,5 +1,7 @@
-.toggle-select{
-  border:1px solid green;
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700&display=swap");
+
+.toggle-select {
+  border: 1px solid green;
 }
 
 :root {
@@ -20,7 +22,6 @@
 
   --proj-shadow: #46515c;
   --proj-shadow-inset: #2f3647;
-
 
   /* gradients */
   --inner-gradient-one: #ebeeef;
@@ -61,7 +62,7 @@
   --head-gradient-two: #1e1e1e;
   --head-gradient-three: #1a1a1a;
   --main-border: #3f3b4d;
-  --nav-text-color:#938ac6;
+  --nav-text-color: #938ac6;
   --nav-text-bg: #7d74b1;
   --nav-link-hover: #6b6d7b;
   --nav-current: #181517;
@@ -72,7 +73,7 @@ a {
 }
 
 .ul-heading-big {
-  font-family: monospace;
+  font-family: "Urbanist", sans-serif;
   font-size: 32px;
   font-weight: bolder;
   color: var(--col-accent);
@@ -80,12 +81,13 @@ a {
   border-radius: 3px;
   padding-left: 25px;
   padding-right: 25px;
-  text-shadow: 1px 1px 1px var(--ul-shadow-one), -1px -1px 2px var(--ul-shadow-two);
+  text-shadow: 1px 1px 1px var(--ul-shadow-one),
+    -1px -1px 2px var(--ul-shadow-two);
 }
 
 .ul-heading-small {
   margin-top: 1em;
-  font-family: monospace;
+  font-family: "Urbanist", sans-serif;
   font-size: 22px;
   font-weight: bolder;
   color: var(--col-accent);
@@ -96,7 +98,8 @@ a {
 }
 
 .justify-all-text {
-  text-align: justify
+  text-align: justify;
+  font-size: 20px;
 }
 
 .ul-heading-small li {
@@ -124,7 +127,6 @@ a {
 .ul-heading-small li.reinforced-line {
   font-weight: bold;
   color: var(--nav-text-color);
-
 }
 
 .ul-heading-small a {
@@ -134,11 +136,11 @@ a {
   font-size: 22px;
   color: var(--col-primary);
   text-decoration: none;
-  ;
 }
 
 .reinforced-text {
-  text-shadow: 2px 2px 3px var(--np-shadow-one), 1px 1px 1px var(--np-shadow-two);
+  text-shadow: 2px 2px 3px var(--np-shadow-one),
+    1px 1px 1px var(--np-shadow-two);
   font-size: 26px;
 }
 
@@ -175,15 +177,16 @@ a {
 #image-blackjack {
   background-color: var(--col-accent);
   border: 8px solid black;
-  box-shadow: -2px 2px 2px var(--project-shadow-one), -4px 4px 2px var(--project-shadow-two);
+  box-shadow: -2px 2px 2px var(--project-shadow-one),
+    -4px 4px 2px var(--project-shadow-two);
   border-radius: 9px;
   overflow: hidden;
   filter: contrast(120%);
   transition: transform 0.8s ease-in, transform 0.3s ease-out;
 }
 
-.dark #image-cruddit{
-  filter:brightness(85%);
+.dark #image-cruddit {
+  filter: brightness(85%);
 }
 
 .portfolio-image:hover {
@@ -203,20 +206,21 @@ a {
   z-index: 100;
   padding-top: 60px;
   font-size: 30px;
-  font-family: monospace;
+  font-family: "Urbanist", sans-serif;
 }
 
 .home-info-header {
-  color:var(--col-accent);
-  font-family: monospace;
+  color: var(--col-accent);
+  font-family: "Urbanist", sans-serif;
   font-size: 3em;
   font-weight: lighter !important;
-  text-shadow: 1px 1px 1px var(--ul-shadow-one), -1px -2px 2px var(--ul-shadow-two);
+  text-shadow: 1px 1px 1px var(--ul-shadow-one),
+    -1px -2px 2px var(--ul-shadow-two);
 }
 
 .home-info-text {
   color: var(--col-accent);
-  font-family: monospace;
+  font-family: "Urbanist", sans-serif;
   font-size: 19px;
   text-shadow: 1px 1px 1px var(--col-primary), 1px -1px 2px var(--bg-one);
 }
@@ -235,7 +239,8 @@ a {
 
 .project-box {
   border: 1px solid #000000;
-  box-shadow: -2px 2px 2px var(--proj-shadow), 2px 2px 2px var(--proj-shadow), 0 8px 0 inset var(--proj-shadow-inset);
+  box-shadow: -2px 2px 2px var(--proj-shadow), 2px 2px 2px var(--proj-shadow),
+    0 8px 0 inset var(--proj-shadow-inset);
   background-color: var(--col-primary);
   border-radius: 5px;
   margin-top: 2em;
@@ -259,22 +264,22 @@ a {
 }
 
 .test-bg::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 40%;
   left: 0%;
   height: 300px;
   width: 105%;
   z-index: 1;
-  background: repeating-linear-gradient(90deg,
-      var(--head-gradient-one),
-      var(--head-gradient-two),
-      var(--head-gradient-three) 0.5%);
+  background: repeating-linear-gradient(
+    90deg,
+    var(--head-gradient-one),
+    var(--head-gradient-two),
+    var(--head-gradient-three) 0.5%
+  );
   border-bottom: 2px solid var(--main-border);
-  ;
   /* box-shadow: 0px 2px 2px black; */
 }
-
 
 @media (max-width: 768px) {
   .nav-item-box {
@@ -282,7 +287,6 @@ a {
     top: 0;
   }
 }
-
 
 .middle-box {
   height: 80vh;
@@ -299,10 +303,12 @@ a {
 }
 
 .inner-box {
-  background: repeating-linear-gradient(0deg,
-      var(--inner-gradient-one),
-      var(--inner-gradient-two),
-      var(--inner-gradient-three) 0.1%);
+  background: repeating-linear-gradient(
+    0deg,
+    var(--inner-gradient-one),
+    var(--inner-gradient-two),
+    var(--inner-gradient-three) 0.1%
+  );
 }
 
 .nav-current {
@@ -312,12 +318,11 @@ a {
   transition: background-color 0.5s ease;
 }
 
-
 .nav-item {
-  color:var(--col-accent);
+  color: var(--col-accent);
   display: inline-block;
   font-size: 26px;
-  font-family: monospace;
+  font-family: "Urbanist", sans-serif;
   margin-bottom: 10px;
 }
 
@@ -352,36 +357,37 @@ a {
   z-index: 1000;
 }
 
-.button-dark, .button-light {
-  border:none;
-  padding-bottom:2px;
-  border-radius:4px;
+.button-dark,
+.button-light {
+  border: none;
+  padding-bottom: 2px;
+  border-radius: 4px;
 }
 
 .button-light {
-  background-color:var(--nav-text-bg);
-  border:2px dashed #000000;
-  color:#ffffff;
+  background-color: var(--nav-text-bg);
+  border: 2px dashed #000000;
+  color: #ffffff;
 }
 
 .dark .button-light {
-  background:none;
-  border:none;
-  color:#c2c2c2;
+  background: none;
+  border: none;
+  color: #c2c2c2;
 }
 
 .dark .button-dark {
-  background-color:var(--nav-text-bg);
-  border:2px dashed #ffffff;
-  color:#ffffff;
+  background-color: var(--nav-text-bg);
+  border: 2px dashed #ffffff;
+  color: #ffffff;
 }
 
 .button-dark {
-  color:var(--col-accent);
+  color: var(--col-accent);
 }
 
 .subDiv {
-  margin-top:20px;
+  margin-top: 20px;
 }
 
 .top-button {
@@ -409,19 +415,19 @@ a {
   }
 }
 
-@media (max-width:1600px) {
+@media (max-width: 1600px) {
   .home-info-text {
     font-size: 18px;
   }
 }
 
-@media (max-width:1240px) {
+@media (max-width: 1240px) {
   .home-info-text {
     font-size: 16px;
   }
 }
 
-@media (max-width:550px) {
+@media (max-width: 550px) {
   .home-info-text {
     padding-right: 30px;
   }
