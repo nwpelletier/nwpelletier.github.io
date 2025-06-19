@@ -23,6 +23,12 @@ const Nav = () => {
       >
         resume
       </NavLink>
+      <NavLink
+        to="/testpage"
+        className={({ isActive }) => (isActive ? "tab active" : "tab")}
+      >
+        testpage
+      </NavLink>
     </div>
   );
 };
