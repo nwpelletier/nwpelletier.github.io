@@ -4,13 +4,15 @@ import { FiCode, FiPenTool, FiCpu, FiFeather, FiUsers } from "react-icons/fi";
 
 const Home = () => {
   return (
-    <div className="intro">
-      <h2>Hi!</h2>
-      <p>
-        I'm Nick, a web developer focused on React and modern UI. Coming from a
-        music and sound recording background, I approach problems carefully and
-        creatively, with strong attention to detail and user experience.
-      </p>
+    <div className="home-container">
+      <div className="about-me">
+        <h2>Hi! My name is Nick Pelletier</h2>
+        <h4>
+          I am a web developer focused on React and modern UI. Coming from a
+          music and sound recording background, I approach problems carefully
+          and creatively, with strong attention to detail and user experience.
+        </h4>
+      </div>
 
       <div className="icon-row">
         <div className="icon-item">

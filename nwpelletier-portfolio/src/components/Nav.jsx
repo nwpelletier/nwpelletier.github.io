@@ -3,9 +3,12 @@ import "./Nav.css";
 import { NavLink } from "react-router-dom";
 import { useContext, useState } from "react";
 import { ScreenSizeContext } from "../contexts/ScreenSizeContext.jsx";
+import { ThemeContext } from "../contexts/ThemeContext.jsx";
+import { ColorPicker } from "./ColorPicker.jsx";
 
 const Nav = () => {
   const { isMobile } = useContext(ScreenSizeContext);
+  const { themeKey, setThemeKey } = useContext(ThemeContext);
   const [menuOpen, setMenuOpen] = useState(false);
   const navClass = isMobile ? "nav-mobile" : "nav-desktop";
   const handleLinkClick = () => {
@@ -13,9 +16,22 @@ const Nav = () => {
   };
   return (
     <div className={`nav-container ${navClass}`}>
+      {!isMobile && (
+        <ColorPicker
+          currentTheme={themeKey}
+          onChange={setThemeKey}
+          className={`color-picker-desktop`}
+        />
+      )}
+
       <div className={navClass}>
         {isMobile && (
           <>
+            <ColorPicker
+              currentTheme={themeKey}
+              onChange={setThemeKey}
+              className={`color-picker-mobile`}
+            />
             <button
               className="menu-toggle"
               onClick={() => setMenuOpen(!menuOpen)}
