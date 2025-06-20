@@ -13,79 +13,89 @@ const Nav = () => {
   };
   return (
     <div className={`nav-container ${navClass}`}>
-      {isMobile && (
-        <>
-          <button
-            className="menu-toggle"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            {menuOpen ? "X" : "☰"}
-          </button>
-          {menuOpen && (
-            <div className="mobile-menu">
+      <div className={navClass}>
+        {isMobile && (
+          <>
+            <button
+              className="menu-toggle"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              {menuOpen ? "X" : "☰"}
+            </button>
+            {menuOpen && (
+              <div className="mobile-menu">
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive ? "tab active" : "tab"
+                  }
+                  onClick={handleLinkClick}
+                >
+                  home
+                </NavLink>
+                <NavLink
+                  to="/projects"
+                  className={({ isActive }) =>
+                    isActive ? "tab active" : "tab"
+                  }
+                  onClick={handleLinkClick}
+                >
+                  projects
+                </NavLink>
+                <NavLink
+                  to="/resume"
+                  className={({ isActive }) =>
+                    isActive ? "tab active" : "tab"
+                  }
+                  onClick={handleLinkClick}
+                >
+                  resume
+                </NavLink>
+                <NavLink
+                  to="/testpage"
+                  className={({ isActive }) =>
+                    isActive ? "tab active" : "tab"
+                  }
+                  onClick={handleLinkClick}
+                >
+                  testpage
+                </NavLink>
+              </div>
+            )}
+          </>
+        )}
+
+        {!isMobile && (
+          <>
+            <div className="desktop-menu">
               <NavLink
                 to="/"
                 className={({ isActive }) => (isActive ? "tab active" : "tab")}
-                onClick={handleLinkClick}
               >
                 home
               </NavLink>
               <NavLink
                 to="/projects"
                 className={({ isActive }) => (isActive ? "tab active" : "tab")}
-                onClick={handleLinkClick}
               >
                 projects
               </NavLink>
               <NavLink
                 to="/resume"
                 className={({ isActive }) => (isActive ? "tab active" : "tab")}
-                onClick={handleLinkClick}
               >
                 resume
               </NavLink>
               <NavLink
                 to="/testpage"
                 className={({ isActive }) => (isActive ? "tab active" : "tab")}
-                onClick={handleLinkClick}
               >
                 testpage
               </NavLink>
             </div>
-          )}
-        </>
-      )}
-
-      {!isMobile && (
-        <>
-          <div className="desktop-menu">
-            <NavLink
-              to="/"
-              className={({ isActive }) => (isActive ? "tab active" : "tab")}
-            >
-              home
-            </NavLink>
-            <NavLink
-              to="/projects"
-              className={({ isActive }) => (isActive ? "tab active" : "tab")}
-            >
-              projects
-            </NavLink>
-            <NavLink
-              to="/resume"
-              className={({ isActive }) => (isActive ? "tab active" : "tab")}
-            >
-              resume
-            </NavLink>
-            <NavLink
-              to="/testpage"
-              className={({ isActive }) => (isActive ? "tab active" : "tab")}
-            >
-              testpage
-            </NavLink>
-          </div>
-        </>
-      )}
+          </>
+        )}
+      </div>
     </div>
   );
 };

@@ -1,4 +1,5 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, useLocation } from "react-router-dom";
+import { useLayoutEffect } from "react";
 import "./App.css";
 import Nav from "./components/Nav";
 import Home from "./pages/Home";
@@ -6,18 +7,28 @@ import Projects from "./pages/Projects";
 import Resume from "./pages/Resume";
 import TestPage from "./pages/TestPage";
 
+const Wrapper = ({ children }) => {
+  const location = useLocation();
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [location.pathname]);
+  return children;
+};
+
 function App() {
   return (
     <div className="app-layout">
       <Nav />
-      <div className="page-wrapper">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/testpage" element={<TestPage />} />
-        </Routes>
-      </div>
+      <Wrapper>
+        <div className="page-wrapper">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/testpage" element={<TestPage />} />
+          </Routes>
+        </div>
+      </Wrapper>
     </div>
   );
 }

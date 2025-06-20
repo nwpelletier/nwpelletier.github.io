@@ -1,5 +1,8 @@
 .nav-container {
   position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #fffaf3;
 }
 
 .nav-mobile {
@@ -9,6 +12,9 @@
 }
 
 .desktop-menu {
+  padding: 1em 0;
+  border-bottom: 2px dashed #ffedd3;
+  box-shadow: 0 1px 2px 0px #ffedd3;
   display: flex;
   justify-content: center;
   align-items: center;
