@@ -8,7 +8,7 @@ import TestPage from "./pages/TestPage";
 
 function App() {
   return (
-    <>
+    <div className="app-layout">
       <Nav />
       <div className="page-wrapper">
         <Routes>
@@ -18,7 +18,7 @@ function App() {
           <Route path="/testpage" element={<TestPage />} />
         </Routes>
       </div>
-    </>
+    </div>
   );
 }
 

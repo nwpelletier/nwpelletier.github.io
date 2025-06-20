@@ -1,19 +1,70 @@
 .nav-container {
+  position: fixed;
+}
+
+.nav-mobile {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.desktop-menu {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+}
+
+.desktop-menu .tab {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.mobile-menu {
+  margin: 0 10px;
+  padding: 0;
+  border-radius: 0;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.menu-toggle {
+  font-size: 2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  color: #ff7d03;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-menu {
+  background-color: white;
+  position: absolute;
+  top: 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 .tab {
-  position: relative;
-  margin: 0 10px;
-  padding: 10px 20px;
   text-decoration: none;
-  font-size: 2em;
-  font-weight: 600;
+  position: relative;
   color: #ff7d03;
-  border-radius: 5px;
   transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
