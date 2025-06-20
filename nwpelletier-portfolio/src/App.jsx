@@ -20,6 +20,26 @@ function App() {
     <div className="app-layout">
       <Nav />
       <Wrapper>
+        <div className="bg-decor">
+          <div
+            className="bg-circle"
+            style={{
+              top: "10%",
+              left: "15%",
+              width: "120px",
+              height: "120px",
+            }}
+          ></div>
+          <div
+            className="bg-circle"
+            style={{
+              top: "40%",
+              left: "70%",
+              width: "200px",
+              height: "200px",
+            }}
+          ></div>
+        </div>
         <div className="page-wrapper">
           <Routes>
             <Route path="/" element={<Home />} />

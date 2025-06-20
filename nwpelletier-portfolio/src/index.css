@@ -6,28 +6,28 @@
 }
 
 .theme-orange {
-  --color-bg: #fffaf3;
+  --color-bg: #fcf5eb;
   --color-border: #ffedd3;
   --color-primary: #ff7d03;
   --color-hover: #ff7d035d;
 }
 
 .theme-blue {
-  --color-bg: #f3f8ff;
+  --color-bg: #dff0fd;
   --color-border: #d3e2ff;
-  --color-primary: #037dff;
-  --color-hover: #037dff5d;
+  --color-primary: #039aff;
+  --color-hover: #038eff5d;
 }
 
 .theme-green {
-  --color-bg: #f0faf4;
+  --color-bg: #e8fcf0;
   --color-border: #a8d5a3;
   --color-primary: #2e7d32;
   --color-hover: #2e7d324d;
 }
 
 .theme-bw {
-  --color-bg: #ffffff;
+  --color-bg: #f1f1f1;
   --color-border: #d1d1d1;
   --color-primary: #222222;
   --color-hover: #2222224d;
