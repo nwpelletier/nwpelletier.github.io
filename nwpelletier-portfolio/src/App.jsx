@@ -24,7 +24,7 @@ function App() {
           <div
             className="bg-circle"
             style={{
-              top: "10%",
+              top: "15%",
               left: "15%",
               width: "120px",
               height: "120px",
@@ -34,9 +34,18 @@ function App() {
             className="bg-circle"
             style={{
               top: "40%",
-              left: "70%",
+              left: "80%",
               width: "200px",
               height: "200px",
+            }}
+          ></div>
+          <div
+            className="bg-circle"
+            style={{
+              top: "70%",
+              left: "30%",
+              width: "80px",
+              height: "80px",
             }}
           ></div>
         </div>

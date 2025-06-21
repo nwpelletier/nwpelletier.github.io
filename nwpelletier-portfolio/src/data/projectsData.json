@@ -5,24 +5,25 @@
     "content": [
       {
         "type": "text",
-        "value": "A networked VR project built in Unity using a client-server architecture. Players could interact with programmable lab equipment in real time, simulating experiments in a shared virtual space.  I implemented interaction systems using a finite state machine to manage object behavior and player input cleanly across networked clients.  Two systems I worked extensively on were the Incubator and Tube Fuser"
+        "value": "A networked VR project built in Unity using a client-server architecture, where multiple users can interact with programmable lab equipment in real time to simulate scientific experiments collaboratively in a shared virtual environment. When I joined the project, a modular BTV system (Behavior, Target, Visualizer) was already in place to organize interaction logic. My role involved extending this model across new equipment and objects while maintaining sync across clients using Unity's Netcode RPC system."
       },
       { "type": "image", "src": "/pictures/edu-vrai-incubator.jpg" },
       {
         "type": "text",
-        "value": "The incubator allows users to swab different areas of the virtual lab, collect samples in petri dishes, and place them inside the incubator. Once inside, users can run heating and cooling cycles to control the temperature, which updates in real time and stays synced across all connected players."
+        "value": "I focused heavily on debugging and expanding the functionality of the tube fuser and tube sealer, adding custom error states and teacher-student interaction modes. I also designed and implemented several systems from scratch, including the incubator, autoclave, and an adjustable lab chair—each with interactive VR controls and networked state management."
       },
       { "type": "image", "src": "/pictures/edu-vrai-tubefuser.jpg" },
       {
         "type": "text",
-        "value": "The tube fuser operates in several states. A 'teacher' can trigger error codes that the student must troubleshoot. The experience includes detailed VR interactions, such as grabbing a magnetic tool to hold a razor blade and carefully inserting it into the machine. Components animate realistically and actions are synchronized for all users. The user can also open and close the glass door, lock or unlock the device, and reset it as needed."
+        "value": "One particularly challenging feature was the ability to “paint” bacteria samples onto petri dishes. This required encoding sample data into compact, serializable forms (using byte arrays and custom structs) that could be transmitted via RPC and reliably synced between clients."
       },
       {
         "type": "text",
-        "value": "The project emphasized reliability and low-latency interaction, with a strong focus on immersive, educational design."
+        "value": "Beyond system logic, I also contributed to UX and polish: adding visual highlights on hoverable objects, automatic resets for objects that fell out of bounds, and key audio cues—like ambient fans, machinery clicks, and interface feedback sounds—to enhance immersion. The project emphasized low-latency, high-reliability communication, with careful attention to intuitive user experience in a complex, educational VR setting."
       }
     ],
-    "url": "https://vrai-dev.johnabbott.qc.ca/"
+    "url": "https://vrai-dev.johnabbott.qc.ca/",
+    "urlTitle": "Visit the VRAI website"
   },
   {
     "title": "CERASP Website",
@@ -30,7 +31,7 @@
     "content": [
       {
         "type": "text",
-        "value": "Redesign of CERASP's website using React and Strapi to replace their current WordPress setup. The new site is designed to be faster, more maintainable, and easier for the team to update without technical overhead. It emphasizes a clean, accessible display of extensive content, intentionally avoiding burying information behind layers of link-clicks."
+        "value": "Redesign of CERASP's website using React for the frontend and Strapi as a headless CMS, replacing their outdated WordPress setup. The new site is significantly faster and more responsive, combining public-facing static content (like localization files and structured JSON) with a CMS-driven backend for the sections the client needs to manage dynamically. Strapi allows the team to add, edit, or delete content entries without touching code, while the frontend remains highly performant and lightweight."
       },
       {
         "type": "image",
@@ -39,14 +40,19 @@
 
       {
         "type": "text",
-        "value": "The frontend is mobile-responsive and features CSS animations and custom React hooks to manage scroll behavior. Navigation is snappy and intuitive across all devices, offering a fluid, app-like experience. React Context is used for language localization, making it easy to switch between French and English seamlessly."
+        "value": "The site is fully bilingual (English/French), using React Context and localized JSON files to provide near-instant switching between languages—no reloads, no delays. This was a major improvement over the older WordPress version, which suffered from slower load times and buried content navigation. We preserved the original site's palette and general layout, but focused on a cleaner, more intuitive design that simplifies access for users and administrators alike."
       },
       {
         "type": "image",
         "src": "/pictures/cerasp-mobile.jpg"
+      },
+      {
+        "type": "text",
+        "value": "The frontend is built with modern React patterns: functional components, useState, useEffect, useContext, and react-router-dom for navigation. A number of custom hooks were written to track scroll progress, handle smooth section scrolling, and manage language toggles. CSS animations are used subtly to give polish to key UI elements. The entire experience is mobile-first and fluid, offering a fast, app-like experience across all devices."
       }
     ],
-    "url": "https://cerasp.vercel.app"
+    "url": "https://cerasp.vercel.app",
+    "urlTitle": "Visit the live site!"
   },
   {
     "title": "Game Map Generator",
@@ -54,7 +60,7 @@
     "content": [
       {
         "type": "text",
-        "value": "Creates a grid-based maze of varying room types. You can set any grid size (tested with sizes 100+), and the generator still works reliably. The maze always has one start room (green), one end room (red), and a mazelike path connecting them.  This personal project is inspired by the procedural generation of dungeons in games like The Binding of Isaac and Spelunky."
+        "value": "This was my first fully self-driven deep dive into Unity, sparked by the desire to better understand procedural content generation—specifically the kind of dungeon-like level design seen in games like The Binding of Isaac, Spelunky, and Rogue Legacy. After contributing to the EDU-VRAI VR project, I wanted to explore game design mechanics from the ground up, even if the visuals and systems were primitive at first."
       },
       {
         "type": "image",
@@ -62,7 +68,7 @@
       },
       {
         "type": "text",
-        "value": "Makes use of room prefabs (with every combination of open doors to the four cardinal directions), which are placed randomly in the grid. The generator ensures that each room is connected to at least one other room, creating a continuous path through the maze.  Kruskal's algorithm is used to ensure that the maze is fully connected and has no loops."
+        "value": "The generator allows the user to define any grid size (minimum 3x3), and automatically builds a maze that includes a spawn room, an exit room, and a selection of other room types—such as enemy rooms, trap rooms, and treasure rooms. I implemented Kruskal’s algorithm to ensure a connected maze with no loops, so the player can always reach the exit from the spawn point, while preserving a nonlinear feel that encourages exploration."
       },
       {
         "type": "image",
@@ -70,11 +76,15 @@
       },
       {
         "type": "text",
-        "value": "The rooms are currently marked with colored spheres to indicate their type (spawn, end, trap-room, treasure-room, etc.). Additional scripts leverage the placement of these rooms so the player will have to traverse many rooms before reaching the end, and will encounter traps and treasures along the way.  Room sub-types have floor-grids that can be used to place objects like enemies, items, and obstacles, also with the capacity to be randomized."
+        "value": "Each room is constructed using prefabs with different combinations of open doorways in the four cardinal directions. Colored markers and primitive shapes were used to quickly differentiate room types. Additional logic determines how far from the spawn each room is placed and assigns subtypes accordingly, ensuring that high-value or high-risk rooms are distributed in meaningful ways."
       },
       {
         "type": "image",
         "src": "/pictures/map-generator-workspace.jpg"
+      },
+      {
+        "type": "text",
+        "value": "While the graphics and 3D elements are barebones, I incorporated object pooling to manage potential enemy spawns and allow the system to scale to large grids (tested with 100+ rooms). This began as a technical playground and still functions that way—a personal research project that lets me experiment with some of my favorite game mechanics. For future iterations, I may refactor it into a 2D system to better focus on the logic and usability, but for now, it’s a satisfying start to building systems from scratch."
       }
     ],
     "url": ""
@@ -85,7 +95,7 @@
     "content": [
       {
         "type": "text",
-        "value": "A Chrome extension that automatically lowers the volume of Twitch ads to a user-defined level. It uses MutationObservers to detect when an ad is playing and adjusts the volume accordingly, ensuring a consistent and comfortable viewing experience."
+        "value": "As someone who often has background audio playing while working—switching between music playlists, YouTube, or Twitch.tv—I noticed a recurring issue with Twitch’s volume handling during ads. When your Twitch player volume is set low, ads sometimes abruptly play at much higher volume, which can be jarring. This inspired me to create my first Chrome extension to handle this problem."
       },
       {
         "type": "image",
@@ -93,7 +103,7 @@
       },
       {
         "type": "text",
-        "value": "The extension is designed to be lightweight and unobtrusive, running in the background without affecting the overall performance of the browser or Twitch itself."
+        "value": "I started by identifying the key DOM elements—the ad player and the volume slider—and experimented with scripts in the browser console to manipulate the volume before, during, and after ads. After extensive testing, I developed a straightforward solution: the extension polls regularly to detect when an ad element appears. Once an ad is detected, it stores the user’s current volume (saved in Chrome storage) and adjusts the volume according to the user’s preference for ads—either leaving volume unchanged, muting completely, or dimming it by half. When the ad finishes, the volume is restored to the saved user level."
       },
       {
         "type": "image",
@@ -101,9 +111,10 @@
       },
       {
         "type": "text",
-        "value": "Future improvements would include adding support for more platforms and enhancing the user interface for easier configuration and customization."
+        "value": "This logic runs entirely within the content script. Meanwhile, the background script broadcasts any setting changes to all other open Chrome tabs running Twitch, ensuring consistent behavior. The current UI is very simple, serving as a proof of concept to understand extension development from scratch. Future versions will add more customizable volume settings, a cleaner interface, and support for YouTube ads as well."
       }
     ],
-    "url": "https://github.com/nwpelletier/ad-volume-normalizer/"
+    "url": "https://chromewebstore.google.com/detail/whisperads/jpifidmolmffpipmffgekoikmkocokha",
+    "urlTitle": "Check it out on the Chrome Web Store"
   }
 ]

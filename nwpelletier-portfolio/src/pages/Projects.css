@@ -1,0 +1,80 @@
+.page-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  margin: auto auto;
+  min-height: 100vh;
+  overflow-y: hidden;
+}
+
+.projects-list {
+  position: fixed;
+  top: 30%;
+  left: 40px;
+  display: block;
+}
+
+.project-title {
+  font-size: 30px;
+  padding: 0.2em 0;
+  color: var(--color-secondary);
+}
+
+.project-title:hover {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.project-title.active {
+  font-weight: 800;
+}
+
+.projects-container {
+  display: flex;
+  width: 100%;
+  margin-top: 10%;
+  gap: 3em;
+}
+
+.project {
+  border: 2px dashed black;
+  border-radius: 5px;
+  padding: 2em;
+  margin-bottom: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project img {
+  width: 50%;
+}
+
+.project-subheading {
+  align-items: center;
+  display: flex;
+}
+
+.project-subheading span {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0 0.4em;
+}
+
+.project-subheading a {
+  text-decoration: underline dashed;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  color: black;
+  font-size: 20px;
+}
+
+.project-subheading h3 {
+  font-weight: 400;
+}
+
+.project-subheading a:hover {
+  transform: scale(1.05);
+}

@@ -1,21 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext } from "react";
+import { ScreenSizeContext } from "../contexts/ScreenSizeContext";
 import projectsData from "../data/projectsData.json";
 import "./Projects.css";
 
 const Projects = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const { isMobile } = useContext(ScreenSizeContext);
 
-  useEffect(() => {
-    const handleResize = () => setScreenWidth(window.innerWidth);
-
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup on unmount
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const isFullScreen = screenWidth > 1200;
   const handleSelect = (index) => {
     setSelectedIndex(index);
   };
@@ -36,17 +27,16 @@ const Projects = () => {
 
       <div className="projects-container">
         {projectsData.map((project, idx) => {
-          if (isFullScreen) {
-            if (selectedIndex !== null && selectedIndex !== idx) return null;
-          }
+          if (!isMobile && selectedIndex !== idx) return null;
+
           return (
             <div key={idx} className="project">
               <h1>{project.title}</h1>
               <div className="project-subheading">
                 <h3>{project.technologies}</h3>
-                <span> | </span>
+                {project.url && <span> | </span>}
                 <a href={project.url} target="_blank" rel="noopener noreferrer">
-                  {project.url}
+                  {project.urlTitle || ""}
                 </a>
               </div>
 
