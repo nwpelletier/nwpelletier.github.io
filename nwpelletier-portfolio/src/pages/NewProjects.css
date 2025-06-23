@@ -1,0 +1,10 @@
+.projects-container {
+  display: flex;
+  align-self: center;
+  margin-left: 10em;
+  margin-top: 10em;
+  width: 50vw;
+  /* min-height: 80vh; */
+  overflow-y: scroll;
+  scrollbar-width: none;
+}

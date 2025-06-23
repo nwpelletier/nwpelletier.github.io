@@ -1,12 +1,14 @@
 import React, { useState, useContext } from "react";
 import { ScreenSizeContext } from "../contexts/ScreenSizeContext";
-import projectsData from "../data/projectsData.json";
+import EduVrai from "./projects/EduVrai";
+import CeraspWebsite from "./projects/CeraspWebsite";
+import GameMapGenerator from "./projects/GameMapGenerator";
 import WhisperAds from "./projects/WhisperAds";
 import "./NewProjects.css";
 
 const NewProjects = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const { isMobile } = useContext(ScreenSizeContext);
+  // const { isMobile } = useContext(ScreenSizeContext);
   const projects = [
     "EDU-VRAI",
     "CERASP Website",
@@ -16,10 +18,11 @@ const NewProjects = () => {
 
   const handleSelect = (index) => {
     setSelectedIndex(index);
+    console.log(index);
   };
 
   return (
-    <div className="page-container">
+    <>
       <div className="projects-list">
         {projects.map((project, idx) => (
           <div
@@ -31,11 +34,13 @@ const NewProjects = () => {
           </div>
         ))}
       </div>
-
       <div className="projects-container">
-        {selectedIndex == 0 && <WhisperAds />}
+        {selectedIndex == 0 && <EduVrai />}
+        {selectedIndex == 1 && <CeraspWebsite />}
+        {selectedIndex == 2 && <GameMapGenerator />}
+        {selectedIndex == 3 && <WhisperAds />}
       </div>
-    </div>
+    </>
   );
 };
 
