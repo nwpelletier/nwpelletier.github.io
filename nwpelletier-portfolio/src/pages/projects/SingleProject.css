@@ -5,7 +5,6 @@
   overflow-y: scroll;
   scrollbar-width: none;
   background-color: white;
-  /* background-color: var(--color-bg); */
   border-radius: 20px 20px 0 0;
   height: 100%;
   overflow: hidden;
@@ -17,8 +16,7 @@
   max-height: 100%;
   padding: 1em;
   scrollbar-width: thin;
-  scrollbar-color: var(--color-primary) transparent;
-  border: 1px solid var(--color-secondary);
+  scrollbar-color: var(--color-alt) transparent;
   border-top: 0;
 }
 
@@ -137,6 +135,7 @@
 
 .project-single-footer a {
   text-decoration: none;
+  color: var(--color-bg);
   padding: 0.5em;
   border-radius: 4px;
   font-size: 20px;

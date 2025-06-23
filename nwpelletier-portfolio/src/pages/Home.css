@@ -51,7 +51,8 @@
 .nick-photo {
   min-width: 300px;
   min-height: 300px;
-  background-color: var(--color-hover);
+  background-color: var(--color-alt);
+  opacity: 0.4;
   border-radius: 10px;
 }
 

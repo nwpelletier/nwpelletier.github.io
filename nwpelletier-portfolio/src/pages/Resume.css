@@ -1,95 +1,101 @@
 /* Resume.css */
 
 .resume-page {
+  border-radius: 20px 20px 0 0;
   background-color: var(--color-bg);
-  color: var(--color-primary);
-  padding: 3em 1.5em;
-  max-width: 60vw;
+  max-width: 50vw;
   margin: 0 auto;
+  margin-top: 8em;
   user-select: text;
+  z-index: 1;
 }
 
 .resume-container {
+  padding: 3em 1.5em;
   display: flex;
   flex-direction: column;
-  gap: 3em;
 }
 
 /* Header */
 .resume-header {
+  border-radius: 20px 20px 0 0;
   text-align: center;
-  border-bottom: 2px solid var(--color-border);
-  padding-bottom: 1em;
+  padding: 1.4em;
+  margin: -3em -1.5em;
+  background-color: var(--color-primary);
 }
 
-.name-title {
+.resume-name-title {
+  color: var(--color-bg);
   font-weight: 700;
   font-size: 3rem;
   margin: 0 0 0.25em 0;
-  color: var(--color-primary);
 }
 
-.contact-info {
+.resume-contact-info {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5em 3em;
-  font-size: 1rem;
-  color: var(--color-secondary);
+  gap: 0.4em 1em;
+  font-size: 1.2rem;
+  color: var(--color-alt);
   margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
-.contact-item {
+.resume-contact-item {
   display: flex;
   gap: 0.3em;
   align-items: center;
 }
 
-.contact-label {
+.resume-contact-label {
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--color-alt);
 }
 
-.contact-item a {
-  color: var(--color-secondary);
+.resume-contact-item a {
+  color: var(--color-bg);
+  font-weight: 600;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.contact-item a:hover {
+.resume-contact-item a:hover {
   color: var(--color-primary);
   text-decoration: underline;
 }
 
 /* Download Button */
-.download-section {
+.resume-download-section {
   display: flex;
   justify-content: center;
-  margin: 1em 0 3em 0;
 }
 
-.download-btn {
+.resume-download-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5em;
-  background-color: var(--color-primary);
-  color: var(--color-bg);
-  padding: 0.7em 1.6em;
+  background-color: var(--color-bg);
+  color: var(--color-alt);
+  margin-top: 0.4em;
+  padding: 0.4em 1.2em;
   font-weight: 600;
   font-size: 1.1rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgb(0 0 0 / 0.15);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   user-select: none;
 }
 
-.download-btn:hover {
-  background-color: var(--color-secondary);
+.resume-download-btn:hover {
+  color: var(--color-primary);
+  background-color: var(--color-alt);
   box-shadow: 0 6px 14px rgb(0 0 0 / 0.25);
 }
 
-.download-icon {
+.resume-download-icon {
   font-size: 1.2rem;
 }
 
@@ -99,7 +105,11 @@
   padding: 2em 0 0 0;
 }
 
-.section-title {
+.resume-objective {
+  border-top: none !important;
+}
+
+.resume-section-title {
   font-weight: 700;
   font-size: 2rem;
   color: var(--color-primary);
@@ -107,24 +117,33 @@
   user-select: text;
 }
 
+.resume-section-title::after {
+  content: "";
+  width: 12%;
+  display: block;
+  border-radius: 4px;
+  height: 3px;
+  background: linear-gradient(to right, var(--color-primary), transparent);
+}
+
 /* Text content inside sections */
-.section-content {
+.resume-section-content {
   font-size: 1.1rem;
   line-height: 1.6;
   color: var(--color-secondary);
 }
 
 /* Experience and Education Items */
-.experience-item,
-.education-item,
-.project-item {
+.resume-experience-item,
+.resume-education-item,
+.resume-project-item {
   margin-bottom: 1.8em;
   user-select: text;
 }
 
-.job-header,
-.degree-header,
-.project-header {
+.resume-job-header,
+.resume-degree-header,
+.resume-project-header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -133,28 +152,29 @@
   margin-bottom: 0.4em;
 }
 
-.job-title,
-.degree-title,
-.project-title {
+.resume-job-title,
+.resume-degree-title,
+.resume-project-title {
   font-weight: 600;
   font-size: 1.25rem;
   color: var(--color-secondary);
   user-select: text;
 }
 
-.job-details,
-.education-details {
+.resume-job-details,
+.resume-education-details {
   font-size: 0.95rem;
   color: var(--color-secondary);
   user-select: text;
   white-space: nowrap;
 }
 
-.date-location {
+.resume-date-location {
+  margin-left: 0.4em;
   font-style: italic;
 }
 
-.project-status {
+.resume-project-status {
   background-color: var(--color-hover);
   color: var(--color-primary);
   padding: 0.15em 0.5em;
@@ -165,8 +185,8 @@
 }
 
 /* Lists */
-.job-duties,
-.project-details {
+.resume-job-duties,
+.resume-project-details {
   list-style-type: disc;
   margin-left: 1.5em;
   margin-top: 0.3em;
@@ -174,35 +194,37 @@
   user-select: text;
 }
 
-.job-duties li,
-.project-details li {
+.resume-job-duties li,
+.resume-project-details li {
   margin-bottom: 0.5em;
 }
 
 /* Skills */
-.skills-category {
+.resume-skills-category {
   margin-bottom: 1.8em;
 }
 
-.skill-category-title {
+.resume-skill-category-title {
   font-weight: 600;
   color: var(--color-secondary);
   margin-bottom: 0.5em;
   font-size: 1.1rem;
 }
 
-.skills-list {
+.resume-skills-list {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6em 1em;
 }
 
-.skill-tag {
-  background-color: var(--color-hover);
+.resume-skill-tag {
+  background-color: var(--color-alt);
   color: var(--color-primary);
   padding: 0.35em 0.8em;
   border-radius: 20px;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.3em;
+  text-shadow: 1px 1px 3px var(--color-secondary);
   font-weight: 600;
   user-select: none;
   cursor: default;
@@ -210,17 +232,17 @@
 
 /* Responsive tweaks */
 @media screen and (max-width: 600px) {
-  .contact-info {
+  .resume-contact-info {
     flex-direction: column;
     align-items: center;
   }
-  .job-header,
-  .degree-header,
-  .project-header {
+  .resume-job-header,
+  .resume-degree-header,
+  .resume-project-header {
     flex-direction: column;
     align-items: flex-start;
   }
-  .date-location {
+  .resume-date-location {
     white-space: normal;
   }
 }

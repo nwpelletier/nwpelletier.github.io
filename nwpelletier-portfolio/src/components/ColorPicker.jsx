@@ -5,10 +5,13 @@ const themes = {
   blue: "#037dff",
   bw: "#222222",
   purple: "#7b3ff2",
-  red: "#cc1f1f",
   teal: "#008080",
   sand: "#c2a670",
-  mint: "#2bb673",
+  forest: "#3b7a57",
+  steel: "#4a5e74",
+  rose: "#cc3366",
+  amber: "#ffb300",
+  slate: "#374151",
 };
 
 export const ColorPicker = ({ currentTheme, onChange, className }) => {

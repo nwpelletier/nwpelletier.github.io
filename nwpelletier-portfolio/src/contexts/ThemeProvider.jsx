@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { ThemeContext } from "./ThemeContext";
 
 export const ThemeProvider = ({ children }) => {
-  const [themeKey, setThemeKey] = useState("blue");
+  const [themeKey, setThemeKey] = useState("slate");
 
   useEffect(() => {
     document.body.className = `theme-${themeKey}`;
