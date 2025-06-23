@@ -1,0 +1,226 @@
+/* Resume.css */
+
+.resume-page {
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+  padding: 3em 1.5em;
+  max-width: 60vw;
+  margin: 0 auto;
+  user-select: text;
+}
+
+.resume-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
+/* Header */
+.resume-header {
+  text-align: center;
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: 1em;
+}
+
+.name-title {
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 0 0 0.25em 0;
+  color: var(--color-primary);
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5em 3em;
+  font-size: 1rem;
+  color: var(--color-secondary);
+  margin-top: 0.5em;
+}
+
+.contact-item {
+  display: flex;
+  gap: 0.3em;
+  align-items: center;
+}
+
+.contact-label {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.contact-item a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* Download Button */
+.download-section {
+  display: flex;
+  justify-content: center;
+  margin: 1em 0 3em 0;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  padding: 0.7em 1.6em;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.15);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.download-btn:hover {
+  background-color: var(--color-secondary);
+  box-shadow: 0 6px 14px rgb(0 0 0 / 0.25);
+}
+
+.download-icon {
+  font-size: 1.2rem;
+}
+
+/* Sections */
+.resume-section {
+  border-top: 2px solid var(--color-border);
+  padding: 2em 0 0 0;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 1em;
+  user-select: text;
+}
+
+/* Text content inside sections */
+.section-content {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--color-secondary);
+}
+
+/* Experience and Education Items */
+.experience-item,
+.education-item,
+.project-item {
+  margin-bottom: 1.8em;
+  user-select: text;
+}
+
+.job-header,
+.degree-header,
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5em 1em;
+  margin-bottom: 0.4em;
+}
+
+.job-title,
+.degree-title,
+.project-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--color-secondary);
+  user-select: text;
+}
+
+.job-details,
+.education-details {
+  font-size: 0.95rem;
+  color: var(--color-secondary);
+  user-select: text;
+  white-space: nowrap;
+}
+
+.date-location {
+  font-style: italic;
+}
+
+.project-status {
+  background-color: var(--color-hover);
+  color: var(--color-primary);
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  user-select: none;
+}
+
+/* Lists */
+.job-duties,
+.project-details {
+  list-style-type: disc;
+  margin-left: 1.5em;
+  margin-top: 0.3em;
+  color: var(--color-secondary);
+  user-select: text;
+}
+
+.job-duties li,
+.project-details li {
+  margin-bottom: 0.5em;
+}
+
+/* Skills */
+.skills-category {
+  margin-bottom: 1.8em;
+}
+
+.skill-category-title {
+  font-weight: 600;
+  color: var(--color-secondary);
+  margin-bottom: 0.5em;
+  font-size: 1.1rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em 1em;
+}
+
+.skill-tag {
+  background-color: var(--color-hover);
+  color: var(--color-primary);
+  padding: 0.35em 0.8em;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  user-select: none;
+  cursor: default;
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 600px) {
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .job-header,
+  .degree-header,
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .date-location {
+    white-space: normal;
+  }
+}

@@ -72,3 +72,25 @@ body::-webkit-scrollbar {
     margin: 4em 5%;
   }
 }
+
+.domed-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 5vh;
+  background: var(--color-secondary);
+  opacity: 1;
+  z-index: 1;
+}
+
+.domed-footer::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 70% 70%;
+  width: 104%;
+  height: 100%;
+  background: var(--color-secondary);
+  transform: translate(-2%, -50%);
+  box-shadow: 0 -3px 0px 0px var(--color-secondary);
+}

@@ -18,6 +18,8 @@
   padding: 1em;
   scrollbar-width: thin;
   scrollbar-color: var(--color-primary) transparent;
+  border: 1px solid var(--color-secondary);
+  border-top: 0;
 }
 
 /* WebKit Scrollbar Styling */
@@ -48,8 +50,8 @@
 }
 
 .project-single-header h1,
-span,
-a {
+.project-single-header span,
+.project-single-header a {
   color: white;
 }
 

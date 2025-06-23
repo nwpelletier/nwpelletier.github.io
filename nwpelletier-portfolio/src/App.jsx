@@ -20,6 +20,19 @@ function App() {
     <div className="app-layout">
       <Nav />
       <Wrapper>
+        <div className="domed-footer">
+          <svg
+            className="dome-arc"
+            viewBox="0 0 100 50"
+            preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0,50 Q50,0 100,50 L100,100 L0,100 Z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
         <div className="bg-decor">
           <div
             className="bg-circle"
