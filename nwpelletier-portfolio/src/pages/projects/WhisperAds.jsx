@@ -60,7 +60,7 @@ const WhisperAds = () => {
           </figure>
         </div>
 
-        <div className="project-single-row" id="final-item">
+        <div className="project-single-row">
           <p>
             {" "}
             This logic runs entirely within the content script. Meanwhile, the
@@ -71,6 +71,15 @@ const WhisperAds = () => {
             add more customizable volume settings, a cleaner interface, and
             support for YouTube ads as well.
           </p>
+        </div>
+        <div className="project-single-footer">
+          <a
+            href="https://github.com/nwpelletier/ad-volume-normalizer"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Check out the code on Github!
+          </a>
         </div>
       </div>
     </div>

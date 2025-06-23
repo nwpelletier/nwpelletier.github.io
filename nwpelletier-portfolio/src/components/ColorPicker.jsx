@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import "./ColorPicker.css"; // new CSS file
 
 const themes = {
-  orange: "#ff7d03",
   blue: "#037dff",
-  green: "#2e7d32",
   bw: "#222222",
+  purple: "#7b3ff2",
+  red: "#cc1f1f",
+  teal: "#008080",
+  sand: "#c2a670",
+  mint: "#2bb673",
 };
 
 export const ColorPicker = ({ currentTheme, onChange, className }) => {

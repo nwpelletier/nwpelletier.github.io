@@ -4,7 +4,6 @@ import "./App.css";
 import Nav from "./components/Nav";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
-import NewProjects from "./pages/NewProjects";
 import Resume from "./pages/Resume";
 import TestPage from "./pages/TestPage";
 
@@ -54,7 +53,6 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
-            <Route path="/newprojects" element={<NewProjects />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/testpage" element={<TestPage />} />
           </Routes>

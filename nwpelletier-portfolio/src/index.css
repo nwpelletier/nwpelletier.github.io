@@ -5,15 +5,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.theme-orange {
-  --color-bg: #fcf5eb;
-  --color-border: #ffedd3;
-  --color-primary: #ff7d03;
-  --color-secondary: #b95400;
-  --color-hover: #ff7d035d;
-  --color-alt: #0066cc;
-}
-
 .theme-blue {
   --color-bg: #dff0fd;
   --color-border: #d3e2ff;
@@ -23,15 +14,6 @@
   --color-alt: #ff6600;
 }
 
-.theme-green {
-  --color-bg: #e8fcf0;
-  --color-border: #a8d5a3;
-  --color-primary: #2e7d32;
-  --color-secondary: #1b4d1e;
-  --color-hover: #2e7d324d;
-  --color-alt: #cc2a36;
-}
-
 .theme-bw {
   --color-bg: #f1f1f1;
   --color-border: #d1d1d1;
@@ -39,4 +21,49 @@
   --color-secondary: #000000;
   --color-hover: #2222224d;
   --color-alt: #ff0080;
+}
+
+.theme-purple {
+  --color-bg: #f5f0fa;
+  --color-border: #e0d3f8;
+  --color-primary: #7b3ff2;
+  --color-secondary: #4e2c94;
+  --color-hover: #7b3ff25d;
+  --color-alt: #ffcc00;
+}
+
+.theme-red {
+  --color-bg: #fbeaea;
+  --color-border: #f3c4c4;
+  --color-primary: #cc1f1f;
+  --color-secondary: #801313;
+  --color-hover: #cc1f1f5d;
+  --color-alt: #1fa7cc;
+}
+
+.theme-teal {
+  --color-bg: #eafcfb;
+  --color-border: #b4e6e2;
+  --color-primary: #008080;
+  --color-secondary: #004d4d;
+  --color-hover: #0080805d;
+  --color-alt: #ff5e9c;
+}
+
+.theme-sand {
+  --color-bg: #fdfaf4;
+  --color-border: #e4dacb;
+  --color-primary: #c2a670;
+  --color-secondary: #7a6244;
+  --color-hover: #c2a6705d;
+  --color-alt: #4f709c;
+}
+
+.theme-mint {
+  --color-bg: #eafff5;
+  --color-border: #c2f0dd;
+  --color-primary: #2bb673;
+  --color-secondary: #1d7a4f;
+  --color-hover: #2bb6735d;
+  --color-alt: #b632a6;
 }

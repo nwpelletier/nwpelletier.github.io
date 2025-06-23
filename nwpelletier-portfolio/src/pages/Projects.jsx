@@ -1,62 +1,46 @@
 import React, { useState, useContext } from "react";
 import { ScreenSizeContext } from "../contexts/ScreenSizeContext";
-import projectsData from "../data/projectsData.json";
+import EduVrai from "./projects/EduVrai";
+import CeraspWebsite from "./projects/CeraspWebsite";
+import GameMapGenerator from "./projects/GameMapGenerator";
+import WhisperAds from "./projects/WhisperAds";
 import "./Projects.css";
 
 const Projects = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const { isMobile } = useContext(ScreenSizeContext);
+  // const { isMobile } = useContext(ScreenSizeContext);
+  const projects = [
+    "EDU-VRAI",
+    "CERASP Website",
+    "Game Map Generator",
+    "WhisperAds",
+  ];
 
   const handleSelect = (index) => {
     setSelectedIndex(index);
+    console.log(index);
   };
 
   return (
-    <div className="page-container">
+    <>
       <div className="projects-list">
-        {projectsData.map((project, idx) => (
+        {projects.map((project, idx) => (
           <div
             key={idx}
-            className={`project-title ${selectedIndex === idx ? "active" : ""}`}
+            className={`project-title ${idx === selectedIndex ? `active` : ""}`}
             onClick={() => handleSelect(idx)}
           >
-            {project.title}
+            {project}
           </div>
         ))}
       </div>
-
       <div className="projects-container">
-        {projectsData.map((project, idx) => {
-          if (!isMobile && selectedIndex !== idx) return null;
-
-          return (
-            <div key={idx} className="project">
-              <h1>{project.title}</h1>
-              <div className="project-subheading">
-                <h3>{project.technologies}</h3>
-                {project.url && <span> | </span>}
-                <a href={project.url} target="_blank" rel="noopener noreferrer">
-                  {project.urlTitle || ""}
-                </a>
-              </div>
-
-              {project.content.map((item, i) => {
-                if (item.type === "text") return <p key={i}>{item.value}</p>;
-                if (item.type === "image")
-                  return (
-                    <img
-                      key={i}
-                      src={item.src}
-                      alt={`${project.title} image ${i}`}
-                    />
-                  );
-                return null;
-              })}
-            </div>
-          );
-        })}
+        {selectedIndex == 0 && <EduVrai />}
+        {selectedIndex == 1 && <CeraspWebsite />}
+        {selectedIndex == 2 && <GameMapGenerator />}
+        {selectedIndex == 3 && <WhisperAds />}
       </div>
-    </div>
+    </>
   );
 };
 
