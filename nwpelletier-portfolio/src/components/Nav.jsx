@@ -59,6 +59,15 @@ const Nav = () => {
                   projects
                 </NavLink>
                 <NavLink
+                  to="/newprojects"
+                  className={({ isActive }) =>
+                    isActive ? "tab active" : "tab"
+                  }
+                  onClick={handleLinkClick}
+                >
+                  new projects
+                </NavLink>
+                <NavLink
                   to="/resume"
                   className={({ isActive }) =>
                     isActive ? "tab active" : "tab"
@@ -66,15 +75,6 @@ const Nav = () => {
                   onClick={handleLinkClick}
                 >
                   resume
-                </NavLink>
-                <NavLink
-                  to="/testpage"
-                  className={({ isActive }) =>
-                    isActive ? "tab active" : "tab"
-                  }
-                  onClick={handleLinkClick}
-                >
-                  testpage
                 </NavLink>
               </div>
             )}
@@ -97,16 +97,16 @@ const Nav = () => {
                 projects
               </NavLink>
               <NavLink
+                to="/newprojects"
+                className={({ isActive }) => (isActive ? "tab active" : "tab")}
+              >
+                new projects
+              </NavLink>
+              <NavLink
                 to="/resume"
                 className={({ isActive }) => (isActive ? "tab active" : "tab")}
               >
                 resume
-              </NavLink>
-              <NavLink
-                to="/testpage"
-                className={({ isActive }) => (isActive ? "tab active" : "tab")}
-              >
-                testpage
               </NavLink>
             </div>
           </>
