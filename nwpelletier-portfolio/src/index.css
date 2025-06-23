@@ -9,30 +9,34 @@
   --color-bg: #fcf5eb;
   --color-border: #ffedd3;
   --color-primary: #ff7d03;
-  --color-secondary: #b95400; /* darker orange */
+  --color-secondary: #b95400;
   --color-hover: #ff7d035d;
+  --color-alt: #0066cc;
 }
 
 .theme-blue {
   --color-bg: #dff0fd;
   --color-border: #d3e2ff;
   --color-primary: #039aff;
-  --color-secondary: #025b9b; /* darker blue */
+  --color-secondary: #025b9b;
   --color-hover: #038eff5d;
+  --color-alt: #ff6600;
 }
 
 .theme-green {
   --color-bg: #e8fcf0;
   --color-border: #a8d5a3;
   --color-primary: #2e7d32;
-  --color-secondary: #1b4d1e; /* darker green */
+  --color-secondary: #1b4d1e;
   --color-hover: #2e7d324d;
+  --color-alt: #cc2a36;
 }
 
 .theme-bw {
   --color-bg: #f1f1f1;
   --color-border: #d1d1d1;
   --color-primary: #222222;
-  --color-secondary: #000000; /* pure black */
+  --color-secondary: #000000;
   --color-hover: #2222224d;
+  --color-alt: #ff0080;
 }
