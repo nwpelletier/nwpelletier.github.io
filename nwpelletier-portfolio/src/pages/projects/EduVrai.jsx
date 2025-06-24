@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 
 const EduVrai = () => {
+  const { isTablet, isMobile } = useContext(ScreenSizeContext);
   return (
     <div className="project-single-container">
       <div className="project-single-header">
@@ -22,7 +24,13 @@ const EduVrai = () => {
       </div>
 
       <div className="project-single-scrollable">
-        <div className="project-single-row">
+        <div
+          className={
+            isTablet || isMobile
+              ? `project-single-column`
+              : `project-single-row`
+          }
+        >
           <img src="/pictures/edu-vrai-incubator.jpg" alt="VR incubator view" />
           <p>
             A networked VR project built in Unity using a client-server

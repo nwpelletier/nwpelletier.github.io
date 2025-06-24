@@ -17,7 +17,7 @@ const Resume = () => {
             </div>
             <div className="resume-contact-item">
               <span className="resume-contact-label">Location:</span>
-              <span>Montréal, QC</span>
+              <span id="resume-city">Montréal, QC</span>
             </div>
             <div className="resume-contact-item">
               <span className="resume-contact-label">Phone:</span>

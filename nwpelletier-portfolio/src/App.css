@@ -43,6 +43,7 @@ body::-webkit-scrollbar {
 }
 
 .page-wrapper {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   overflow-y: hidden;
@@ -68,7 +69,7 @@ body::-webkit-scrollbar {
 
 @media screen and (max-width: 900px) {
   .page-wrapper {
-    margin: 4em 5%;
+    margin: 0 5%;
   }
 }
 

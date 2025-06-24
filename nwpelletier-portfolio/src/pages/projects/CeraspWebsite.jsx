@@ -23,7 +23,6 @@ const CeraspWebsite = () => {
 
       <div className="project-single-scrollable">
         <div className="project-single-column">
-          <img src="/pictures/cerasp-overview.jpg" alt="CERASP site overview" />
           <p>
             Redesign of CERASP's website using React for the frontend and Strapi
             as a headless CMS, replacing their outdated WordPress setup. The new
@@ -34,6 +33,7 @@ const CeraspWebsite = () => {
             content entries without touching code, while the frontend remains
             highly performant and lightweight.
           </p>
+          <img src="/pictures/cerasp-overview.jpg" alt="CERASP site overview" />
         </div>
 
         <div className="project-single-column">

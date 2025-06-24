@@ -5,7 +5,7 @@
   overflow-y: scroll;
   scrollbar-width: none;
   background-color: white;
-  border-radius: 20px 20px 0 0;
+  border-radius: 20px 20px 0 20px;
   height: 100%;
   overflow: hidden;
   z-index: 10;
@@ -161,4 +161,29 @@
 .project-single-column img {
   max-width: 100%;
   height: auto;
+}
+
+@media screen and (max-width: 900px) {
+  .project-single-header {
+    padding: 0.4em 0;
+  }
+  .project-single-header span {
+    font-size: 48px;
+    font-weight: 600;
+    margin: 0 0.1em;
+  }
+
+  .project-single-header img {
+    border-radius: 4px;
+    border: 1px solid white;
+    margin: 0 1.4em;
+  }
+
+  .project-single-header h1 {
+    font-size: 24px;
+  }
+
+  .project-single-header a {
+    font-size: 18px;
+  }
 }

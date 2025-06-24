@@ -20,6 +20,10 @@
   z-index: 10;
 }
 
+.nav-container.nav-mobile {
+  background-color: transparent;
+}
+
 .nav-mobile {
   display: flex;
   justify-content: flex-end;

@@ -1,11 +1,11 @@
 .projects-container {
-  /* background-color: yellow; */
+  background-color: yellow;
   display: flex;
   align-self: center;
   margin-left: 10em;
   margin-top: 8em;
   width: 60vw;
-  height: calc(100vh - 8em);
+  height: calc(90vh - 8em);
   overflow-y: unset;
   border-radius: 20px;
   box-shadow: 0px 4px 8px 2px var(--color-border);
@@ -14,13 +14,12 @@
 .projects-list {
   /* background-color: yellow; */
   position: fixed;
-  font-size: 30px;
   top: 30%;
-  left: 140px;
+  left: 80px;
 }
 
 .project-title {
-  font-size: 30px;
+  font-size: 26px;
   padding: 0.2em 0;
   color: var(--color-secondary);
 }
@@ -32,4 +31,57 @@
 
 .project-title.active {
   font-weight: 800;
+}
+
+.project-mobile-selectors {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2em;
+  margin-top: 2.4em;
+}
+
+.project-selector-left,
+.project-selector-right {
+  height: 40px;
+  width: 40px;
+  background-color: var(--color-primary);
+  box-shadow: 0 2px 5px 2px var(--color-alt);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.project-selector-left:hover,
+.project-selector-right:hover {
+  background-color: var(--color-secondary);
+}
+
+@media screen and (max-width: 1200px) {
+  .projects-container {
+    width: 65vw;
+    margin-left: 18em;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .projects-container {
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 2em;
+  }
+
+  .projects-list {
+    display: none;
+  }
+
+  .project-title {
+    font-size: 18px;
+    padding: 0.2em 0;
+    color: var(--color-secondary);
+  }
 }

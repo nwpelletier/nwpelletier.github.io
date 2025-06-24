@@ -1,13 +1,18 @@
 /* Resume.css */
 
 .resume-page {
-  border-radius: 20px 20px 0 0;
+  border-radius: 20px 0 0 20px;
   background-color: var(--color-bg);
-  max-width: 50vw;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-alt) transparent;
+  width: 60vw;
+  height: 75vh;
   margin: 0 auto;
   margin-top: 8em;
   user-select: text;
   z-index: 1;
+  box-shadow: 0px 4px 8px 2px var(--color-border);
 }
 
 .resume-container {
@@ -18,7 +23,7 @@
 
 /* Header */
 .resume-header {
-  border-radius: 20px 20px 0 0;
+  border-radius: 20px 0px 0 0;
   text-align: center;
   padding: 1.4em;
   margin: -3em -1.5em;
@@ -52,6 +57,12 @@
 .resume-contact-label {
   font-weight: 600;
   color: var(--color-alt);
+}
+
+/* this kept getting fucked so it's got an ID now */
+#resume-city {
+  color: white;
+  font-weight: 600;
 }
 
 .resume-contact-item a {
@@ -228,6 +239,32 @@
   font-weight: 600;
   user-select: none;
   cursor: default;
+}
+
+@media screen and (max-width: 1200px) {
+  .resume-page {
+    width: 80vw;
+    height: 80vh;
+    margin: 6em auto;
+  }
+
+  .resume-header {
+    padding: 1.4em;
+    margin: em -1.5em;
+    background-color: var(--color-primary);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .resume-page {
+    margin: 4em auto;
+  }
+
+  .resume-header {
+    padding: 1.4em;
+    margin: -3em -1.5em;
+    background-color: var(--color-primary);
+  }
 }
 
 /* Responsive tweaks */

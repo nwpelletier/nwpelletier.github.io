@@ -66,6 +66,22 @@
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 15%;
+    width: 60%;
+    margin: auto auto;
+    min-height: 100vh;
+  }
+
+  .home-content {
+    flex-direction: column;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .more-details {
     flex-direction: column;
