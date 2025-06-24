@@ -27,14 +27,14 @@ body::-webkit-scrollbar {
   background: repeating-linear-gradient(
       to right,
       transparent,
-      transparent 40px,
-      rgba(0, 0, 0, 0.05) 41px
+      transparent 127px,
+      rgba(0, 0, 0, 0.03) 130px
     ),
     repeating-linear-gradient(
       to bottom,
       transparent,
-      transparent 40px,
-      rgba(0, 0, 0, 0.05) 41px
+      transparent 127px,
+      rgba(0, 0, 0, 0.03) 130px
     );
   position: relative;
 
@@ -67,17 +67,18 @@ body::-webkit-scrollbar {
   border-radius: 50%;
 }
 
-@media screen and (max-width: 900px) {
-  .page-wrapper {
-    margin: 0 5%;
-  }
+.bg-rectangle {
+  position: fixed;
+  background-color: var(--color-alt);
+  opacity: calc(0.02);
+  z-index: -1;
 }
 
 .domed-footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 5vh;
+  height: 4vh;
   background: var(--color-secondary);
   opacity: 1;
   z-index: 1;
@@ -93,4 +94,14 @@ body::-webkit-scrollbar {
   background: var(--color-secondary);
   transform: translate(-2%, -50%);
   box-shadow: 0 -3px 0px 0px var(--color-secondary);
+}
+
+@media screen and (max-width: 900px) {
+  .page-wrapper {
+    margin: 0 5%;
+  }
+
+  .domed-footer::before {
+    transform: translate(-2%, -30%);
+  }
 }

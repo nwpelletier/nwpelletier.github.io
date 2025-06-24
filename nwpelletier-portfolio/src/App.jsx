@@ -5,7 +5,6 @@ import Nav from "./components/Nav";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Resume from "./pages/Resume";
-import TestPage from "./pages/TestPage";
 
 const Wrapper = ({ children }) => {
   const location = useLocation();
@@ -14,6 +13,14 @@ const Wrapper = ({ children }) => {
   }, [location.pathname]);
   return children;
 };
+
+const rectangles = [
+  { top: "20%", left: "10%", width: "200px", height: "150px" },
+  { top: "40%", left: "30%", width: "300px", height: "100px" },
+  { top: "60%", left: "60%", width: "250px", height: "180px" },
+  { top: "10%", left: "70%", width: "150px", height: "150px" },
+  { top: "75%", left: "20%", width: "350px", height: "120px" },
+];
 
 function App() {
   return (
@@ -61,13 +68,25 @@ function App() {
               height: "80px",
             }}
           ></div>
+          {rectangles.map((rect, i) => (
+            <div
+              key={i}
+              className="bg-rectangle"
+              style={{
+                position: "absolute",
+                top: rect.top,
+                left: rect.left,
+                width: rect.width,
+                height: rect.height,
+              }}
+            />
+          ))}
         </div>
         <div className="page-wrapper">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/resume" element={<Resume />} />
-            <Route path="/testpage" element={<TestPage />} />
           </Routes>
         </div>
       </Wrapper>

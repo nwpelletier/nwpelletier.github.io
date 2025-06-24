@@ -44,6 +44,13 @@ const Projects = () => {
           ))}
         </div>
       )}
+
+      <div className="projects-container">
+        {selectedIndex == 0 && <EduVrai />}
+        {selectedIndex == 1 && <CeraspWebsite />}
+        {selectedIndex == 2 && <GameMapGenerator />}
+        {selectedIndex == 3 && <WhisperAds />}
+      </div>
       {isMobile && (
         <div className="project-mobile-selectors">
           <div
@@ -60,13 +67,6 @@ const Projects = () => {
           </div>
         </div>
       )}
-
-      <div className="projects-container">
-        {selectedIndex == 0 && <EduVrai />}
-        {selectedIndex == 1 && <CeraspWebsite />}
-        {selectedIndex == 2 && <GameMapGenerator />}
-        {selectedIndex == 3 && <WhisperAds />}
-      </div>
     </>
   );
 };
