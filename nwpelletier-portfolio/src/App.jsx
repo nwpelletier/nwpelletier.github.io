@@ -14,14 +14,6 @@ const Wrapper = ({ children }) => {
   return children;
 };
 
-const rectangles = [
-  { top: "20%", left: "10%", width: "200px", height: "150px" },
-  { top: "40%", left: "30%", width: "300px", height: "100px" },
-  { top: "60%", left: "60%", width: "250px", height: "180px" },
-  { top: "10%", left: "70%", width: "150px", height: "150px" },
-  { top: "75%", left: "20%", width: "350px", height: "120px" },
-];
-
 function App() {
   return (
     <div className="app-layout">
@@ -68,19 +60,6 @@ function App() {
               height: "80px",
             }}
           ></div>
-          {rectangles.map((rect, i) => (
-            <div
-              key={i}
-              className="bg-rectangle"
-              style={{
-                position: "absolute",
-                top: rect.top,
-                left: rect.left,
-                width: rect.width,
-                height: rect.height,
-              }}
-            />
-          ))}
         </div>
         <div className="page-wrapper">
           <Routes>
