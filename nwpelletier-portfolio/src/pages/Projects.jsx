@@ -1,72 +1,73 @@
-import React, { useState, useEffect } from "react";
-import projectsData from "../data/projectsData.json";
+import React, { useState, useContext } from "react";
+import EduVrai from "./projects/EduVrai";
+import CeraspWebsite from "./projects/CeraspWebsite";
+import GameMapGenerator from "./projects/GameMapGenerator";
+import WhisperAds from "./projects/WhisperAds";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { ScreenSizeContext } from "../contexts/ScreenSizeContext";
 import "./Projects.css";
 
 const Projects = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const { isTablet, isDesktop, isMobile } = useContext(ScreenSizeContext);
+  const projects = [
+    "EDU-VRAI",
+    "CERASP Website",
+    "Game Map Generator",
+    "WhisperAds",
+  ];
 
-  useEffect(() => {
-    const handleResize = () => setScreenWidth(window.innerWidth);
-
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup on unmount
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const isFullScreen = screenWidth > 1200;
   const handleSelect = (index) => {
-    setSelectedIndex(index);
+    if (index >= projects.length) {
+      setSelectedIndex(0);
+    } else if (index < 0) {
+      setSelectedIndex(projects.length - 1);
+    } else {
+      setSelectedIndex(index);
+    }
   };
 
   return (
-    <div className="page-container">
-      <div className="projects-list">
-        {projectsData.map((project, idx) => (
-          <div
-            key={idx}
-            className={`project-title ${selectedIndex === idx ? "active" : ""}`}
-            onClick={() => handleSelect(idx)}
-          >
-            {project.title}
-          </div>
-        ))}
-      </div>
+    <>
+      {(isTablet || isDesktop) && (
+        <div className="projects-list">
+          {projects.map((project, idx) => (
+            <div
+              key={idx}
+              className={`project-title ${
+                idx === selectedIndex ? `active` : ""
+              }`}
+              onClick={() => handleSelect(idx)}
+            >
+              {project}
+            </div>
+          ))}
+        </div>
+      )}
 
       <div className="projects-container">
-        {projectsData.map((project, idx) => {
-          if (isFullScreen) {
-            if (selectedIndex !== null && selectedIndex !== idx) return null;
-          }
-          return (
-            <div key={idx} className="project">
-              <h1>{project.title}</h1>
-              <div className="project-subheading">
-                <h3>{project.technologies}</h3>
-                <span> | </span>
-                <a href={project.url} target="_blank" rel="noopener noreferrer">
-                  {project.url}
-                </a>
-              </div>
-
-              {project.content.map((item, i) => {
-                if (item.type === "text") return <p key={i}>{item.value}</p>;
-                if (item.type === "image")
-                  return (
-                    <img
-                      key={i}
-                      src={item.src}
-                      alt={`${project.title} image ${i}`}
-                    />
-                  );
-                return null;
-              })}
-            </div>
-          );
-        })}
+        {selectedIndex == 0 && <EduVrai />}
+        {selectedIndex == 1 && <CeraspWebsite />}
+        {selectedIndex == 2 && <GameMapGenerator />}
+        {selectedIndex == 3 && <WhisperAds />}
       </div>
-    </div>
+      {isMobile && (
+        <div className="project-mobile-selectors">
+          <div
+            className="project-selector-left"
+            onClick={() => handleSelect(selectedIndex - 1)}
+          >
+            <FiChevronLeft size={24} />
+          </div>
+          <div
+            className="project-selector-right"
+            onClick={() => handleSelect(selectedIndex + 1)}
+          >
+            <FiChevronRight size={24} />
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

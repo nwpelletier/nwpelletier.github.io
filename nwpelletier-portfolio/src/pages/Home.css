@@ -1,28 +1,124 @@
-.intro {
-  width: 90%;
-  margin: 0 auto;
-  color: #333; /* adjust to your palette */
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.icon-row {
+.home-container {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  margin-top: 20px;
   justify-content: center;
+  width: 80%;
+  margin: auto auto;
+  min-height: 100vh;
+  z-index: 10;
 }
 
-.icon-item {
-  display: flex; /* horizontal layout */
-  align-items: center; /* vertically center icon + text */
-  text-align: left; /* left-align text now */
-  color: #2aa4f5;
-  font-weight: 400;
-  gap: 12px; /* space between icon and text */
+.home-content {
+  display: flex;
+  width: 100%;
+  gap: 3em;
 }
 
-.icon {
-  font-size: 40px; /* slightly smaller so it’s balanced */
-  flex-shrink: 0; /* prevent icon from shrinking */
+.about-me {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 10;
+}
+
+.about-me > h1 {
+  font-weight: 600;
+  font-size: 80px;
+  margin: 0;
+  padding: 0;
+}
+
+.about-me > h4 {
+  font-size: 60px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.about-me > p {
+  text-align: justify;
+  font-size: 32px;
+  text-align: justify;
+}
+
+.more-details {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 80%;
+  gap: 4em;
+  align-items: stretch;
+}
+
+.nick-photo {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-color: var(--color-secondary);
+  border-radius: 10px;
+}
+
+.nick-photo::before {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 10px;
+  content: "";
+  display: block;
+  width: 300px;
+  height: 300px;
+  z-index: -1;
+  background-color: var(--color-alt);
+}
+
+@media screen and (max-width: 1200px) {
+  .more-details {
+    width: 100%;
+  }
+
+  .about-me > h4 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 15%;
+    width: 60%;
+    margin: auto auto;
+    min-height: 100vh;
+  }
+
+  .home-content {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .more-details {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2em;
+  }
+
+  .about-me > h1 {
+    font-size: 48px;
+  }
+
+  .about-me p {
+    font-size: 14px;
+  }
+
+  .nick-photo {
+    height: 100px;
+    width: 100px;
+  }
+
+  .nick-photo::before {
+    height: 140px;
+    width: 140px;
+  }
 }
