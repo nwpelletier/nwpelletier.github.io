@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 60%;
+  width: 80%;
   margin: auto auto;
   min-height: 100vh;
   z-index: 10;
@@ -24,19 +24,20 @@
 
 .about-me > h1 {
   font-weight: 600;
-  font-size: 60px;
+  font-size: 80px;
   margin: 0;
   padding: 0;
 }
 
 .about-me > h4 {
-  font-size: 40px;
+  font-size: 60px;
   font-weight: normal;
   margin: 0;
 }
 
 .about-me > p {
-  font-size: 24px;
+  text-align: justify;
+  font-size: 32px;
   text-align: justify;
 }
 
@@ -50,11 +51,24 @@
 }
 
 .nick-photo {
-  min-width: 300px;
-  min-height: 300px;
-  background-color: var(--color-alt);
-  opacity: 0.4;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-color: var(--color-secondary);
   border-radius: 10px;
+}
+
+.nick-photo::before {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 10px;
+  content: "";
+  display: block;
+  width: 300px;
+  height: 300px;
+  z-index: -1;
+  background-color: var(--color-alt);
 }
 
 @media screen and (max-width: 1200px) {
@@ -90,8 +104,21 @@
     gap: 0.2em;
   }
 
+  .about-me > h1 {
+    font-size: 48px;
+  }
+
+  .about-me p {
+    font-size: 14px;
+  }
+
   .nick-photo {
-    height: 180px;
-    width: 180px;
+    height: 100px;
+    width: 100px;
+  }
+
+  .nick-photo::before {
+    height: 140px;
+    width: 140px;
   }
 }

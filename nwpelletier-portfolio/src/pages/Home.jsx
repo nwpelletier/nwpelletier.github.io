@@ -7,7 +7,7 @@ const Home = () => {
       <div className="home-content">
         <div className="about-me">
           <h1>Nick Pelletier</h1>
-          <h4>Web and Software Developer</h4>
+          <h4>Web/Software Developer</h4>
           <p>
             I'm a detail-driven developer who focuses on building performant,
             accessible projects with a creative edge, aiming to craft intuitive

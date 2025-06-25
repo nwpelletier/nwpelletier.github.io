@@ -66,7 +66,8 @@
 }
 
 .project-single-header a {
-  text-decoration: none;
+  text-decoration: dashed underline;
+  text-underline-offset: 4px;
   padding: 0.4em;
   border-radius: 4px;
   font-size: 20px;
@@ -129,11 +130,11 @@
   background-color: var(--color-primary);
   display: flex;
   justify-content: center;
-  margin: 1em 6em 1em 6em;
   border-radius: 10px;
 }
 
 .project-single-footer a {
+  text-align: center;
   text-decoration: none;
   color: var(--color-bg);
   padding: 0.5em;
@@ -186,4 +187,42 @@
   .project-single-header a {
     font-size: 18px;
   }
+
+  .project-single-row p,
+  .project-single-column p {
+    font-size: 14px;
+  }
+
+  figcaption {
+    font-size: 12px;
+  }
+}
+
+/* POPUPS */
+
+.clickable {
+  cursor: zoom-in;
+  transition: transform 0.2s;
+}
+
+.clickable:hover {
+  transform: scale(1.02);
+}
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-image {
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  cursor: zoom-out;
 }

@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import "./SingleProject.css";
 
 const WhisperAds = () => {
+  const { isTablet, isMobile } = useContext(ScreenSizeContext);
+  const [popupImage, setPopupImage] = useState(null);
   return (
     <div className="project-single-container">
       <div className="project-single-header">
@@ -13,14 +16,18 @@ const WhisperAds = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          View it on the Chrome Web Store
+          Available Here
         </a>
       </div>
       <div className="project-single-scrollable">
-        <div className="project-single-row">
-          <img src="/pictures/whisperAds/whisperAdsPopup.jpg" />
+        <div
+          className={
+            isTablet || isMobile
+              ? `project-single-column`
+              : `project-single-row`
+          }
+        >
           <p>
-            {" "}
             As someone who often has background audio playing while
             working—switching between music playlists, YouTube, or Twitch.tv—I
             noticed a recurring issue with Twitch’s volume handling during ads.
@@ -28,11 +35,11 @@ const WhisperAds = () => {
             play at much higher volume, which can be jarring. This inspired me
             to create my first Chrome extension to handle this problem.
           </p>
+          <img src="/pictures/whisperAds/whisperAdsPopup.jpg" />
         </div>
 
         <div className="project-single-column">
           <p>
-            {" "}
             I started by identifying the key DOM elements—the ad player and the
             volume slider—and experimented with scripts in the browser console
             to manipulate the volume before, during, and after ads. After
@@ -45,14 +52,26 @@ const WhisperAds = () => {
             is restored to the saved user level.
           </p>
           <figure>
-            <img src="/pictures/whisperAds/volumeSlider.jpg" />
+            <img
+              src="/pictures/whisperAds/volumeSlider.jpg"
+              onClick={() =>
+                setPopupImage("/pictures/whisperAds/volumeSlider.jpg")
+              }
+              alt="Volume slider in Twitch DOM"
+              className="clickable"
+            />
             <figcaption>
               Inspecting elements until I found the volume slider
             </figcaption>
           </figure>
 
           <figure>
-            <img src="/pictures/whisperAds/videoAd.jpg" />
+            <img
+              src="/pictures/whisperAds/videoAd.jpg"
+              onClick={() => setPopupImage("/pictures/whisperAds/videoAd.jpg")}
+              alt="Video ad countdown element"
+              className="clickable"
+            />
             <figcaption>
               Dug even further until I found an element representing the ad
               countdown
@@ -81,6 +100,16 @@ const WhisperAds = () => {
             Check out the code on Github!
           </a>
         </div>
+        {popupImage && (
+          <div className="popup-overlay" onClick={() => setPopupImage(null)}>
+            <img
+              src={popupImage}
+              className="popup-image"
+              alt="Full size"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        )}
       </div>
     </div>
   );

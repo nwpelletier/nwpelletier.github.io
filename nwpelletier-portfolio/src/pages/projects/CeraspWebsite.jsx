@@ -17,7 +17,7 @@ const CeraspWebsite = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Visit the live site!
+          Live Site
         </a>
       </div>
 

@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
+import "./SingleProject.css";
 
 const GameMapGenerator = () => {
+  const { isTablet, isMobile } = useContext(ScreenSizeContext);
   return (
     <div className="project-single-container">
       <div className="project-single-header">
@@ -12,7 +15,13 @@ const GameMapGenerator = () => {
         <h1>Game Map Generator</h1>
       </div>
       <div className="project-single-scrollable">
-        <div className="project-single-row">
+        <div
+          className={
+            isTablet || isMobile
+              ? `project-single-column`
+              : `project-single-row`
+          }
+        >
           <img src="/pictures/map-generator-layout1.jpg" />
           <p>
             This was my first fully self-driven deep dive into Unity, sparked by

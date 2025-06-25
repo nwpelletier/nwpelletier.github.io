@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
+import "./SingleProject.css";
 
 const EduVrai = () => {
   const { isTablet, isMobile } = useContext(ScreenSizeContext);
@@ -19,7 +20,7 @@ const EduVrai = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Visit the VRAI website
+          VRAI Website
         </a>
       </div>
 
