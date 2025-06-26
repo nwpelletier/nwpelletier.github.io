@@ -165,6 +165,11 @@
 }
 
 @media screen and (max-width: 900px) {
+  .project-single-container {
+    border-bottom: 3px solid var(--color-alt-secondary);
+    border-bottom-left-radius: 0px;
+  }
+
   .project-single-header {
     padding: 0.4em 0;
   }

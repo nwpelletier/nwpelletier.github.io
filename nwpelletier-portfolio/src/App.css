@@ -119,7 +119,7 @@ body::-webkit-scrollbar {
 
 @media screen and (max-width: 900px) {
   .page-wrapper {
-    margin: 0 5%;
+    margin: 0;
   }
 
   .domed-footer::before {
