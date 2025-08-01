@@ -75,6 +75,14 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   overflow-y: hidden;
+  background-color: yellow;
+}
+
+@supports (height: 100dvh) {
+  .page-wrapper {
+    height: 100dvh;
+    background-color: yellow;
+  }
 }
 
 .bg-decor {
