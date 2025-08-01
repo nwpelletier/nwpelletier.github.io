@@ -284,3 +284,11 @@
     white-space: normal;
   }
 }
+
+@supports (height: 100dvh) {
+  @media screen and (max-width: 600px) {
+    .resume-page {
+      height: 100dvh;
+    }
+  }
+}
