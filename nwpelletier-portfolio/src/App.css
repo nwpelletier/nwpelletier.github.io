@@ -77,6 +77,12 @@ body::-webkit-scrollbar {
   overflow-y: hidden;
 }
 
+@supports (height: 100dvh) {
+  .page-wrapper {
+    height: 100dvh;
+  }
+}
+
 .bg-decor {
   position: fixed;
   top: 0;
@@ -119,7 +125,7 @@ body::-webkit-scrollbar {
 
 @media screen and (max-width: 900px) {
   .page-wrapper {
-    margin: 0 5%;
+    margin: 0;
   }
 
   .domed-footer::before {

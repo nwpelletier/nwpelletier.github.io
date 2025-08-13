@@ -1,16 +1,19 @@
-import { Routes, Route, Link, useLocation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useLayoutEffect } from "react";
 import "./App.css";
 import Nav from "./components/Nav";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
-import Resume from "./pages/Resume";
 
 const Wrapper = ({ children }) => {
-  const location = useLocation();
   useLayoutEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-  }, [location.pathname]);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
+  }, []);
+
   return children;
 };
 
@@ -19,19 +22,7 @@ function App() {
     <div className="app-layout">
       <Nav />
       <Wrapper>
-        <div className="domed-footer">
-          <svg
-            className="dome-arc"
-            viewBox="0 0 100 50"
-            preserveAspectRatio="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0,50 Q50,0 100,50 L100,100 L0,100 Z"
-              fill="currentColor"
-            />
-          </svg>
-        </div>
+        <div className="domed-footer"></div>
         <div className="bg-decor">
           <div
             className="bg-circle"
@@ -64,8 +55,11 @@ function App() {
         <div className="page-wrapper">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/resume" element={<Resume />} />
+            <Route
+              path="/projects"
+              element={<Projects />}
+            />
+            {/* No /resume route anymore */}
           </Routes>
         </div>
       </Wrapper>

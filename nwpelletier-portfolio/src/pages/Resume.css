@@ -246,7 +246,7 @@
   .resume-page {
     width: 80vw;
     height: 80vh;
-    margin: 6em auto;
+    margin: 8em auto;
   }
 
   .resume-header {
@@ -282,5 +282,13 @@
   }
   .resume-date-location {
     white-space: normal;
+  }
+}
+
+@supports (height: 100dvh) {
+  @media screen and (max-width: 600px) {
+    .resume-page {
+      height: 100dvh;
+    }
   }
 }

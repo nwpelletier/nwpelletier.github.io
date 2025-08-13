@@ -50,23 +50,23 @@ const Projects = () => {
         {selectedIndex == 1 && <CeraspWebsite />}
         {selectedIndex == 2 && <GameMapGenerator />}
         {selectedIndex == 3 && <WhisperAds />}
+        {isMobile && (
+          <div className="project-mobile-selectors">
+            <div
+              className="project-selector-left"
+              onClick={() => handleSelect(selectedIndex - 1)}
+            >
+              <FiChevronLeft size={24} />
+            </div>
+            <div
+              className="project-selector-right"
+              onClick={() => handleSelect(selectedIndex + 1)}
+            >
+              <FiChevronRight size={24} />
+            </div>
+          </div>
+        )}
       </div>
-      {isMobile && (
-        <div className="project-mobile-selectors">
-          <div
-            className="project-selector-left"
-            onClick={() => handleSelect(selectedIndex - 1)}
-          >
-            <FiChevronLeft size={24} />
-          </div>
-          <div
-            className="project-selector-right"
-            onClick={() => handleSelect(selectedIndex + 1)}
-          >
-            <FiChevronRight size={24} />
-          </div>
-        </div>
-      )}
     </>
   );
 };
