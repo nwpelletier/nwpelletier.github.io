@@ -1,16 +1,19 @@
-import { Routes, Route, Link, useLocation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useLayoutEffect } from "react";
 import "./App.css";
 import Nav from "./components/Nav";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
-import Resume from "./pages/Resume";
 
 const Wrapper = ({ children }) => {
-  const location = useLocation();
   useLayoutEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-  }, [location.pathname]);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
+  }, []);
+
   return children;
 };
 
@@ -52,8 +55,11 @@ function App() {
         <div className="page-wrapper">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/resume" element={<Resume />} />
+            <Route
+              path="/projects"
+              element={<Projects />}
+            />
+            {/* No /resume route anymore */}
           </Routes>
         </div>
       </Wrapper>

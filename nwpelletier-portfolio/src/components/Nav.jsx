@@ -1,4 +1,9 @@
-import React, { useContext, useState, useEffect, useRef } from "react";
+import React, {
+  useContext,
+  useState,
+  useEffect,
+  useRef,
+} from "react";
 import { NavLink } from "react-router-dom";
 import "./Nav.css";
 import { ScreenSizeContext } from "../contexts/ScreenSizeContext.jsx";
@@ -7,7 +12,8 @@ import { ColorPicker } from "./ColorPicker.jsx";
 
 const Nav = () => {
   const { isMobile } = useContext(ScreenSizeContext);
-  const { themeKey, setThemeKey } = useContext(ThemeContext);
+  const { themeKey, setThemeKey } =
+    useContext(ThemeContext);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const menuRef = useRef(null);
@@ -32,11 +38,17 @@ const Nav = () => {
     };
 
     if (menuOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener(
+        "mousedown",
+        handleClickOutside
+      );
     }
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener(
+        "mousedown",
+        handleClickOutside
+      );
     };
   }, [menuOpen]);
 
@@ -68,7 +80,9 @@ const Nav = () => {
             </button>
 
             <div
-              className={`screen-overlay ${menuOpen ? "visible" : ""}`}
+              className={`screen-overlay ${
+                menuOpen ? "visible" : ""
+              }`}
               onClick={() => setMenuOpen(false)}
             />
 
@@ -92,15 +106,15 @@ const Nav = () => {
                 >
                   projects
                 </NavLink>
-                <NavLink
-                  to="/resume"
-                  className={({ isActive }) =>
-                    isActive ? "tab active" : "tab"
-                  }
+                <a
+                  href="/Nicholas_Pelletier_Resume_August2025.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="tab"
                   onClick={handleLinkClick}
                 >
                   resume
-                </NavLink>
+                </a>
               </div>
             )}
           </>
@@ -110,22 +124,28 @@ const Nav = () => {
           <div className="desktop-menu">
             <NavLink
               to="/"
-              className={({ isActive }) => (isActive ? "tab active" : "tab")}
+              className={({ isActive }) =>
+                isActive ? "tab active" : "tab"
+              }
             >
               home
             </NavLink>
             <NavLink
               to="/projects"
-              className={({ isActive }) => (isActive ? "tab active" : "tab")}
+              className={({ isActive }) =>
+                isActive ? "tab active" : "tab"
+              }
             >
               projects
             </NavLink>
-            <NavLink
-              to="/resume"
-              className={({ isActive }) => (isActive ? "tab active" : "tab")}
+            <a
+              href="/npelletier-resume-2025.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="tab"
             >
               resume
-            </NavLink>
+            </a>
           </div>
         )}
       </div>
