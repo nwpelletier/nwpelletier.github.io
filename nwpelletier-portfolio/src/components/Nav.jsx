@@ -139,7 +139,7 @@ const Nav = () => {
               projects
             </NavLink>
             <a
-              href="/npelletier-resume-2025.pdf"
+              href="/Nicholas_Pelletier_Resume_August2025.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="tab"
