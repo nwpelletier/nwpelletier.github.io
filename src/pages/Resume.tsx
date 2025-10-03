@@ -23,10 +23,10 @@ const Resume = () => {
           680-1479 | Location: Montreal, QC
         </p>
         <a
-          href="#"
+          href="/Nick_Pelletier_Resume.pdf"
           className="mt-2 inline-block bg-gray-500 text-white px-4 py-2 rounded-4xl hover:bg-gray-600 transition-all duration-200"
         >
-          Download Resume PDF
+          Resume PDF
         </a>
       </div>
       {/* Work Experience */}
