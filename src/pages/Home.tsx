@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <div className="flex flex-col md:flex-row items-stretch w-full gap-6 mt-10 md:mt-20 h-auto md:h-48 lg:h-56">
-        <div className="flex-shrink-0 overflow-hidden">
+        <div className="flex-shrink-0 shadow-lg shadow-gray-600 overflow-hidden">
           <img
             src="/np-photo.jpg"
             alt="Profile"
@@ -87,6 +87,14 @@ export default function Home() {
         link="https://vrai-dev.johnabbott.qc.ca/"
         linkText="Visit Site"
         images={["/eduvrai-1.png", "/eduvrai-2.png"]}
+      />
+      <ProjectCard
+        title="Syllabase"
+        information="WORK IN PROGRESS - searchable database of Piano Repertoire in the 'RCM' and 'ABRSM' syllabi.  This is a personal project that will help compare both systems."
+        tech="Angular, Nest.js, PostgreSQL"
+        link="---"
+        linkText="Coming soon!"
+        images={["/syllabase-1.png", "/syllabase-2.png"]}
       />
       <ProjectCard
         title="WhisperAds"

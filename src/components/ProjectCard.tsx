@@ -16,7 +16,7 @@ const ProjectCard = ({
   images,
 }: ProjectCardProps) => {
   return (
-    <div className="my-2 border border-gray-200 overflow-hidden lg:h-96 flex flex-col lg:flex-row rounded-lg">
+    <div className="my-4 shadow-md shadow-gray-600 border border-gray-400 overflow-hidden lg:h-96 flex flex-col lg:flex-row rounded-lg">
       <div className="flex-[1] lg:h-full w-full lg:w-1/2 rounded-lg overflow-hidden flex flex-col pl-5 pr-5 py-10 gap-2 bg-white justify-center items-start md:pl-12">
         <h1 className="text-3xl tracking-wider font-bold">
           {title}
