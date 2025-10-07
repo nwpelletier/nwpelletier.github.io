@@ -69,11 +69,11 @@ export default function Home() {
       </div>
       <div className="my-10">
         <p className="text-lg tracking-thinner text-justify">
-          Bilingual fullstack developer. I'm always looking
-          to learn new tech and apply it to creative
-          projects. I have a background in film/audio
-          production, and enjoy bridging the gap between
-          creative and technical problem solving.
+          Fullstack developer. I'm always looking to learn
+          new tech and apply it to creative projects. I have
+          a background in film/audio production, and enjoy
+          bridging the gap between creative and technical
+          problem solving.
         </p>
       </div>
       <ProjectCard
