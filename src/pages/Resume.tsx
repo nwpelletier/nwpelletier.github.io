@@ -9,7 +9,7 @@ const Resume = () => {
   );
 
   return (
-    <div className="max-w-4xl mx-auto p-8 bg-white shadow-md rounded-lg my-8">
+    <div className="w-[100%] sm:max-w-4xl mx-auto p-2 sm:p-8 bg-white shadow-none md:shadow-md rounded-lg my-8">
       {/* Header */}
       <div className="mb-8 ">
         <h1 className="text-4xl font-bold mb-2 ">

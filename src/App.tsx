@@ -17,7 +17,7 @@ function App() {
         {/* Navbar at the top */}
         <Navbar />
         {/* Main content */}
-        <main className="flex flex-col flex-grow lg:w-[70%] w-[80%] md:px-20">
+        <main className="flex flex-col flex-grow w-[100%] sm:-w-[80%] lg:w-[70%] px-2 sm:px-8 md:px-10 lg:px-20">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/resume" element={<Resume />} />
