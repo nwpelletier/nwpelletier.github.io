@@ -24,6 +24,8 @@ const Resume = () => {
         </p>
         <a
           href="/Nicholas_Pelletier_Resume_October_2025.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           className="mt-2 inline-block bg-gray-500 text-white px-4 py-2 rounded-4xl hover:bg-gray-600 transition-all duration-200"
         >
           Resume PDF
@@ -170,7 +172,7 @@ const Resume = () => {
           Frontend:
         </h2>
         <div className="flex flex-wrap gap-2 mb-10">
-          <Skill name="HTML" />
+          <Skill name="HTML & CSS" />
           <Skill name="Javascript" />
           <Skill name="TypeScript" />
           <Skill name="TailwindCSS" />
@@ -184,7 +186,7 @@ const Resume = () => {
         <div className="flex flex-wrap gap-2 mb-10">
           <Skill name="Node.js" />
           <Skill name="NestJS" />
-          <Skill name="RESTful APIs" />
+          <Skill name="REST APIs" />
         </div>
         <h2 className="text-2xl font-semibold mb-4">
           Database/Development:

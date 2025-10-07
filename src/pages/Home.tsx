@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <div className="flex flex-col md:flex-row items-stretch w-full gap-6 mt-10 md:mt-20 h-auto md:h-48 lg:h-56">
-        <div className="md:flex-shrink-0 w-50 h-50 shadow-lg rounded-xl shadow-gray-600 overflow-hidden">
+        <div className="md:flex-shrink-0 w-50 h-50 shadow-sm rounded-xl shadow-gray-800 overflow-hidden">
           <img
             src="/np-photo.jpg"
             alt="Profile"
@@ -67,13 +67,12 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="my-10 w-[100%] lg:w-[80%]">
-        <p className="text-lg font-normal tracking-narrow">
+      <div className="my-4 w-[100%] lg:w-[80%]">
+        <p className="text-lg font-bolder tracking-narrow">
           I’m always exploring new tech and finding ways to
           use it in creative projects. With a background in
           music and film production, I love connecting the
-          creative and technical sides to solve problems in
-          unexpected ways.
+          creative and technical sides to solve problems.
         </p>
       </div>
       <ProjectCard
@@ -96,7 +95,7 @@ export default function Home() {
         title="Syllabase"
         information="WORK IN PROGRESS - searchable database of Piano Repertoire in the 'RCM' and 'ABRSM' syllabi.  This is a personal project that will help compare both systems."
         tech="Angular, Nest.js, PostgreSQL"
-        link="---"
+        // link="---"
         linkText="Coming soon!"
         images={["/syllabase-1.png", "/syllabase-2.png"]}
       />
