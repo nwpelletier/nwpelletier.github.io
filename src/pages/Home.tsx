@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <div className="flex flex-col md:flex-row items-stretch w-full gap-6 mt-10 md:mt-20 h-auto md:h-48 lg:h-56">
-        <div className="flex-shrink-0 shadow-lg shadow-gray-600 overflow-hidden">
+        <div className="flex-shrink-0 shadow-lg rounded-xl shadow-gray-600 overflow-hidden">
           <img
             src="/np-photo.jpg"
             alt="Profile"
@@ -69,7 +69,11 @@ export default function Home() {
       </div>
       <div className="my-10">
         <p className="text-lg tracking-thinner text-justify">
-          {/* fullstack with background in music and film */}
+          Bilingual fullstack developer. I'm always looking
+          to learn new tech and apply it to creative
+          projects. I have a background in film/audio
+          production, and enjoy bridging the gap between
+          creative and technical problem solving.
         </p>
       </div>
       <ProjectCard
