@@ -3,15 +3,16 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import Resume from "./pages/Resume";
-// import Projects from "./pages/Projects";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="flex flex-col min-h-screen bg-white text-gray-600 font-medium items-center">
         {/* Navbar at the top */}
         <Navbar />

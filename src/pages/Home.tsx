@@ -14,7 +14,7 @@ export default function Home() {
 
         <div className="flex flex-col flex-grow">
           <div>
-            <h1 className=" text-3xl md:text-5xl font-bold text-gray-800">
+            <h1 className=" text-3xl md:text-5xl font-bold text-gray-800 whitespace-nowrap">
               Nick Pelletier
             </h1>
             <h3 className="text-xl pl-0.5 font-semibold text-gray-600">

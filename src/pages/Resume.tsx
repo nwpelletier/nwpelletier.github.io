@@ -11,8 +11,8 @@ const Resume = () => {
   return (
     <div className="max-w-4xl mx-auto p-8 bg-white shadow-md rounded-lg my-8">
       {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-4xl font-bold mb-2">
+      <div className="mb-8 ">
+        <h1 className="text-4xl font-bold mb-2 ">
           Nick Pelletier
         </h1>
         <p className="text-gray-500">
