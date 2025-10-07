@@ -4,15 +4,15 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <div className="flex flex-col md:flex-row items-stretch w-full gap-6 mt-10 md:mt-20 h-auto md:h-48 lg:h-56">
-        <div className="md:flex-shrink-0 w-50 h-50 shadow-lg rounded-xl shadow-gray-600 overflow-hidden">
+        <div className="flex-shrink-0 shadow-lg rounded-xl shadow-gray-600 overflow-hidden">
           <img
-            src="/np-photo.jpg"
+            src="/np-photo-bw.jpg"
             alt="Profile"
-            className="h-50 w-auto rounded-xl object-cover"
+            className="h-56 md:h-full w-auto rounded-xl object-cover"
           />
         </div>
 
-        <div className="flex flex-col flex-grow">
+        <div className="flex flex-col flex-grow justify-between">
           <div>
             <h1 className=" text-3xl md:text-5xl font-bold text-gray-800">
               Nick Pelletier
@@ -55,7 +55,7 @@ export default function Home() {
             </div>
             <div>
               <a
-                href="/Nicholas_Pelletier_Resume_October_2025.pdf"
+                href="/Nicholas_Pelletier.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative inline-block group whitespace-nowrap"
@@ -67,13 +67,13 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="my-10 w-[100%] lg:w-[80%]">
-        <p className="text-lg font-normal tracking-narrow">
-          I’m always exploring new tech and finding ways to
-          use it in creative projects. With a background in
-          music and film production, I love connecting the
-          creative and technical sides to solve problems in
-          unexpected ways.
+      <div className="my-10">
+        <p className="text-lg tracking-thinner text-justify">
+          Fullstack developer. I'm always looking to learn
+          new tech and apply it to creative projects. I have
+          a background in film/audio production, and enjoy
+          bridging the gap between creative and technical
+          problem solving.
         </p>
       </div>
       <ProjectCard

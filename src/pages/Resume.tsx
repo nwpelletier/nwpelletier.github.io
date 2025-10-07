@@ -23,7 +23,7 @@ const Resume = () => {
           680-1479 | Location: Montreal, QC
         </p>
         <a
-          href="/Nicholas_Pelletier_Resume_October_2025.pdf"
+          href="/Nick_Pelletier_Resume.pdf"
           className="mt-2 inline-block bg-gray-500 text-white px-4 py-2 rounded-4xl hover:bg-gray-600 transition-all duration-200"
         >
           Resume PDF
@@ -167,36 +167,23 @@ const Resume = () => {
       {/* Skills */}
       <div className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">
-          Frontend:
+          Web/Software
         </h2>
         <div className="flex flex-wrap gap-2 mb-10">
           <Skill name="HTML" />
           <Skill name="Javascript" />
+          <Skill name="React" />
           <Skill name="TypeScript" />
           <Skill name="TailwindCSS" />
-          <Skill name="React" />
-          <Skill name="Angular" />
+          <Skill name="Node.js" />
+          <Skill name="SQL" />
+          <Skill name="C#" />
+          <Skill name="Unity" />
+          <Skill name="Git" />
+          <Skill name="AWS" />
+          <Skill name="Docker" />
         </div>
 
-        <h2 className="text-2xl font-semibold mb-4">
-          Backend:
-        </h2>
-        <div className="flex flex-wrap gap-2 mb-10">
-          <Skill name="Node.js" />
-          <Skill name="NestJS" />
-          <Skill name="RESTful APIs" />
-        </div>
-        <h2 className="text-2xl font-semibold mb-4">
-          Database/Development:
-        </h2>
-        <div className="flex flex-wrap gap-2 mb-10">
-          <Skill name="MySQL" />
-          <Skill name="PostgreSQL" />
-          <Skill name="MongoDB" />
-          <Skill name="C#" />
-          <Skill name="Java" />
-          <Skill name="Unity" />
-        </div>
         <h2 className="text-2xl font-semibold mb-4">
           Other
         </h2>

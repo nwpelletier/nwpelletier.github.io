@@ -16,7 +16,7 @@ const ProjectCard = ({
   images,
 }: ProjectCardProps) => {
   return (
-    <div className="my-4 lg:my-8 border border-gray-200 overflow-hidden lg:h-96 flex flex-col lg:flex-row rounded-lg">
+    <div className="my-4 shadow-lg shadow-gray-400 border border-gray-200 overflow-hidden lg:h-96 flex flex-col lg:flex-row rounded-lg">
       <div className="flex-[1] lg:h-full w-full lg:w-1/2 rounded-lg overflow-hidden flex flex-col pl-5 pr-5 py-10 gap-2 bg-white justify-center items-start md:pl-12">
         <h1 className="text-3xl tracking-wider font-bold">
           {title}
@@ -30,7 +30,7 @@ const ProjectCard = ({
           target="_blank"
           rel="noopener noreferrer"
         >
-          <p className="text-sm text-gray-600 bg-white px-4 py-2 mt-5 ml-5 shadow-sm shadow-gray-400 rounded-3xl hover:bg-gray-400 hover:text-white transition-all duration-200">
+          <p className="text-sm text-gray-200 bg-gray-500 p-2 border border-gray-400 rounded-4xl hover:bg-gray-600 transition-all duration-200">
             {linkText}
           </p>
         </a>
