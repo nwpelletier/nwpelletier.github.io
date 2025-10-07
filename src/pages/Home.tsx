@@ -6,7 +6,7 @@ export default function Home() {
       <div className="flex flex-col md:flex-row items-stretch w-full gap-6 mt-10 md:mt-20 h-auto md:h-48 lg:h-56">
         <div className="flex-shrink-0 shadow-lg rounded-xl shadow-gray-600 overflow-hidden">
           <img
-            src="/np-photo.jpg"
+            src="/np-photo-bw.jpg"
             alt="Profile"
             className="h-56 md:h-full w-auto rounded-xl object-cover"
           />
