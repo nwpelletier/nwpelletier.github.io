@@ -9,16 +9,14 @@ const Resume = () => {
   );
 
   return (
-    <div className="w-[100%] sm:max-w-4xl mx-auto p-2 sm:p-8 bg-white shadow-none md:shadow-md rounded-lg my-8">
+    <div className="w-[100%] sm:max-w-4xl mx-auto p-2 sm:p-8 bg-gray-900/50 shadow-none md:shadow-md rounded-lg my-8 text-gray-200">
       {/* Header */}
       <div className="mb-8 ">
         <h1 className="text-4xl font-bold mb-2 ">
           Nick Pelletier
         </h1>
-        <p className="text-gray-500">
-          Full Stack Developer
-        </p>
-        <p className="text-gray-500">
+        <p className="">Full Stack Developer</p>
+        <p className="">
           Email: nickw.pelletier@gmail.com | Phone: (438)
           680-1479 | Location: Montreal, QC
         </p>
@@ -26,7 +24,7 @@ const Resume = () => {
           href="/Nicholas_Pelletier_Resume_October_2025.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-2 inline-block bg-gray-500 text-white px-4 py-2 rounded-4xl hover:bg-gray-600 transition-all duration-200"
+          className="mt-2 inline-block bg-gray-500 px-4 py-2 rounded-4xl hover:bg-gray-600 transition-all duration-200"
         >
           Resume PDF
         </a>
@@ -42,10 +40,10 @@ const Resume = () => {
           <p className="font-bold">
             Software and Web Developer
           </p>
-          <p className="text-gray-500 font-semibold text-sm mb-2">
+          <p className="font-semibold text-sm mb-2">
             CERASP, Montreal - Since 2024
           </p>
-          <ul className="resume__bullet--spacing list-disc pl-5 text-sm md:text-base  text-gray-500">
+          <ul className="resume__bullet--spacing list-disc pl-5 text-sm md:text-base">
             <li>
               Designed and implemented a responsive,
               multilingual website using React and Strapi
@@ -77,10 +75,10 @@ const Resume = () => {
           <p className="font-bold">
             Sound Recording Technician
           </p>
-          <p className="text-gray-500 font-semibold text-sm mb-2">
+          <p className="font-semibold text-sm mb-2">
             McGill University, Montreal - 2020 - 2022
           </p>
-          <ul className="resume__bullet--spacing list-disc text-sm md:text-base pl-5 text-gray-500">
+          <ul className="resume__bullet--spacing list-disc text-sm md:text-base pl-5">
             <li>
               Provided technical expertise for audio
               recording sessions in studio and live
@@ -105,11 +103,11 @@ const Resume = () => {
         {/* Job 3 */}
         <div>
           <p className="font-bold">Production Assistant</p>
-          <p className="text-gray-500 font-semibold text-sm mb-2">
+          <p className="font-semibold text-sm mb-2">
             Industrial Light and Magic (ILM), Vancouver -
             2016 - 2018
           </p>
-          <ul className="resume__bullet--spacing list-disc text-sm md:text-base pl-5 text-gray-500">
+          <ul className="resume__bullet--spacing list-disc text-sm md:text-base pl-5">
             <li>
               Supported visual effects teams by managing
               asset tracking, documentation, and
@@ -146,23 +144,17 @@ const Resume = () => {
           <p className="font-bold">
             AEC - Fullstack Developer
           </p>
-          <p className="text-gray-500">
-            John Abbott College | 2023
-          </p>
+          <p className="">John Abbott College | 2023</p>
         </div>{" "}
         <div className="mb-2">
           <p className="font-bold">
             Master, Sound Recording
           </p>
-          <p className="text-gray-500">
-            McGill University | 2021
-          </p>
+          <p className="">McGill University | 2021</p>
         </div>
         <div>
           <p className="font-bold">Bachelor, Music</p>
-          <p className="text-gray-500">
-            University of Ottawa | 2013
-          </p>
+          <p className="">University of Ottawa | 2013</p>
         </div>
       </div>
 
@@ -216,7 +208,7 @@ const Resume = () => {
         <h2 className="text-2xl font-semibold mb-4">
           Additional
         </h2>
-        <p className="text-gray-500">
+        <p className="">
           Languages: English, French | Other Interests: Game
           Development and Prototyping, Piano, Classical
           Music

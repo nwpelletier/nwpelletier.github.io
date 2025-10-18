@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <AboutMe />
-      <div className="xl:grid xl:grid-cols-2 gap-8">
+      <div className="lg:grid lg:grid-cols-2 xl:m-0 gap-8">
         <ProjectCard
           title="CERASP"
           information="Website redesign with a focus on easy navigation, quick data fetching, and a mobile friendly approach.  Strapi was selected as a headless CMS to allow the client to access, edit and add media and content."

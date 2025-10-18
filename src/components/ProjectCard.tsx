@@ -19,7 +19,7 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <motion.div
-      className="border-1 border-gray-700 rounded-xl shadow-lg shadow-gray-800/50 text-gray-200 font-normal"
+      className="relative border-1 border-gray-700 rounded-xl shadow-lg shadow-gray-800/50 text-gray-200 font-normal lg:my-0 my-8 "
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -43,15 +43,17 @@ const ProjectCard = ({
           ))}
         </div>
         <div className="project-card-separator"></div>
-        <p className="text-sm">{information}</p>
+        <p className="text-sm text-white mb-16 font-thin">
+          {information}
+        </p>
         {link && linkText && (
           <a
             href={link}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <p className="text-sm bg-transparent px-4 py-2 mt-5 ml-5 shadow-sm shadow-gray-600 rounded-3xl hover:bg-gray-400 hover:text-white transition-all duration-200">
-              {linkText}
+            <p className="text-white absolute bottom-4 text-sm bg-gray-900 px-4 py-2 mt-5 ml-5 border-1 border-gray-400 rounded-3xl hover:bg-gray-400 transition-all duration-200">
+              {linkText.toUpperCase()}
             </p>
           </a>
         )}
