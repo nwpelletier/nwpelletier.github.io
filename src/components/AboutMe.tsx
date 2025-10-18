@@ -2,7 +2,7 @@ export default function AboutMe() {
   return (
     <div className="flex flex-col text-gray-200 shadow-sm">
       <div className="flex flex-col  md:flex-row items-stretch w-full gap-6 mt-10 md:mt-20 h-auto md:h-48 lg:h-56">
-        <div className="md:flex-shrink-0 border-1 border-gray-800 rounded-xl shadow-lg shadow-gray-800 w-50 h-50 overflow-hidden">
+        <div className="md:flex-shrink-0 border-1 border-gray-700 rounded-xl shadow-lg shadow-gray-800 w-50 h-50 overflow-hidden">
           <img
             src="/np-photo-tint.png"
             alt="Profile"
@@ -18,7 +18,7 @@ export default function AboutMe() {
             <h3 className="text-xl pl-0.5 font-semibold">
               Web Developer
             </h3>{" "}
-            <p className="pl-0.5 mt-2">Montreal, QC</p>
+            <p className="pl-0.5 mt-4">Montreal, QC</p>
             <a
               href="mailto:nickwpelletier@gmail.com"
               className="pl-0.5"
@@ -36,7 +36,7 @@ export default function AboutMe() {
               >
                 <img
                   src="linkedin-icon-light.png"
-                  className="inline h-10 w-10 hover:opacity-70 hover:scale-105 transition-all duration-200"
+                  className="inline h-10 w-10 mt-2 hover:opacity-70 hover:scale-105 transition-all duration-200"
                 />
               </a>
               <a
@@ -47,7 +47,7 @@ export default function AboutMe() {
               >
                 <img
                   src="github-icon-light.png"
-                  className="inline h-9 w-9 mr-2 hover:opacity-70 hover:scale-105 transition-all duration-200"
+                  className="inline h-9 w-9 mr-2 mt-2 hover:opacity-70 hover:scale-105 transition-all duration-200"
                 />
               </a>
             </div>

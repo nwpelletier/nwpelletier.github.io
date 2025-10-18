@@ -4,8 +4,6 @@ body {
     BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
     sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400; /* default weight — adjust as needed (100–900) */
-  font-style: normal;
 }
 
 body p,
@@ -15,4 +13,34 @@ h3,
 h4,
 a {
   text-shadow: 1px 1px 6px rgb(66, 66, 66);
+}
+
+.navbar {
+  position: relative;
+}
+.navbar::after {
+  position: absolute;
+  content: "";
+  bottom: -2px;
+  left: -280px;
+  height: 3px;
+  width: 280px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 255, 255, 0.096) 25%,
+    rgba(199, 233, 248, 0.356) 50%,
+    rgba(255, 255, 255, 0.062) 75%,
+    transparent 100%
+  );
+  animation: move-bar 24s linear infinite;
+}
+
+@keyframes move-bar {
+  0% {
+    left: -280px;
+  }
+  100% {
+    left: calc(100% - 80px);
+  }
 }
