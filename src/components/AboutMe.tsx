@@ -1,10 +1,10 @@
 export default function AboutMe() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col text-gray-200 shadow-sm">
       <div className="flex flex-col  md:flex-row items-stretch w-full gap-6 mt-10 md:mt-20 h-auto md:h-48 lg:h-56">
-        <div className="md:flex-shrink-0 border-1 border-gray-800 shadow-lg shadow-gray-800 w-50 h-50 overflow-hidden">
+        <div className="md:flex-shrink-0 border-1 border-gray-800 rounded-xl shadow-lg shadow-gray-800 w-50 h-50 overflow-hidden">
           <img
-            src="/np-photo-base.png"
+            src="/np-photo-tint.png"
             alt="Profile"
             className="h-50 w-auto object-cover"
           />
@@ -12,10 +12,10 @@ export default function AboutMe() {
 
         <div className="flex flex-col flex-grow">
           <div>
-            <h1 className=" text-3xl md:text-5xl font-bold text-gray-800 whitespace-nowrap">
+            <h1 className=" text-3xl md:text-5xl font-bold whitespace-nowrap">
               Nick Pelletier
             </h1>
-            <h3 className="text-xl pl-0.5 font-semibold text-gray-600">
+            <h3 className="text-xl pl-0.5 font-semibold">
               Web Developer
             </h3>{" "}
             <p className="pl-0.5 mt-2">Montreal, QC</p>
@@ -26,7 +26,7 @@ export default function AboutMe() {
               nickw.pelletier@gmail.com
             </a>
           </div>{" "}
-          <div className="flex flex-row gap-10 md:gap-40 pl-0.5 mt-4 text-gray-500 justify-between items-end">
+          <div className="flex flex-row gap-10 md:gap-40 pl-0.5 mt-4justify-between items-end">
             <div className="flex flex-row flex-shrink-0 gap-6">
               <a
                 href="https://www.linkedin.com/in/nwpelletier/"

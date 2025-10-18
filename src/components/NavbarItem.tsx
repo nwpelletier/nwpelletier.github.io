@@ -20,10 +20,10 @@ const NavbarItem: React.FC<NavbarItemProps> = ({
   return (
     <Link
       to={link}
-      className={`py-2 px-6 rounded-4xl transition-all duration-200 ${
+      className={`py-1 px-6 rounded-4xl transition-all duration-200 ${
         isActive
-          ? "text-white  bg-gray-900"
-          : "hover:text-white hover:bg-gray-400"
+          ? "text-white bg-gray-900"
+          : "text-gray-400 hover:shadow-md hover:bg-gray-900 hover:text-gray-200"
       }`}
     >
       {text}
