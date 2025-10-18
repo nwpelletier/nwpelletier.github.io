@@ -1,9 +1,5 @@
 const Projects = () => {
-  return (
-    <div>
-      <h1 className="text-3xl font-bold">Projects Page</h1>
-    </div>
-  );
+  return <div className="h-[200vh]"></div>;
 };
 
 export default Projects;
