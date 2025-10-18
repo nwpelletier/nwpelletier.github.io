@@ -18,9 +18,7 @@ function App() {
       <ScrollToTop />
       <div className="flex flex-col min-h-screen text-gray-600 font-medium items-center">
         <Background />
-        {/* Navbar at the top */}
         <Navbar />
-        {/* Main content */}
         <main className="flex flex-col flex-grow w-[100%] sm:-w-[80%] lg:w-[80%] px-8 md:px-10 lg:px-20 z-1">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -29,13 +27,7 @@ function App() {
               path="/projects"
               element={<Projects />}
             />
-            {/* <Route
-              path="/projects"
-              element={<Projects />}
-            /> */}
           </Routes>
-
-          {/* Footer inside main */}
         </main>
         <Footer />
       </div>

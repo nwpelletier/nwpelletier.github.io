@@ -25,7 +25,6 @@ const ProjectCard = ({
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      {/* Left/Text Section */}
       <div className="w-full flex flex-col items-start p-8">
         <h1 className="text-3xl p-3 font-bold border-2 border-gray-700">
           {title}
