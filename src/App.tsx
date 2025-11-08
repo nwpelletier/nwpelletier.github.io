@@ -16,10 +16,12 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen text-gray-600 font-medium items-center">
+      <div className="relative flex flex-col min-h-screen text-gray-600 font-medium items-center">
         <Background />
+        {/* Navbar at the top */}
         <Navbar />
-        <main className="flex flex-col flex-grow w-[100%] sm:-w-[80%] lg:w-[80%] px-8 md:px-10 lg:px-20 z-1">
+        {/* Main content */}
+        <main className="flex flex-col flex-grow w-[100%] sm:-w-[80%] lg:w-[70%] px-2 sm:px-8 md:px-10 lg:px-20 z-1">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/resume" element={<Resume />} />
@@ -27,7 +29,13 @@ function App() {
               path="/projects"
               element={<Projects />}
             />
+            {/* <Route
+              path="/projects"
+              element={<Projects />}
+            /> */}
           </Routes>
+
+          {/* Footer inside main */}
         </main>
         <Footer />
       </div>

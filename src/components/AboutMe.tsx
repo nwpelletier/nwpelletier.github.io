@@ -1,7 +1,7 @@
 export default function AboutMe() {
   return (
     <div className="flex flex-col items-center sm:flex-row text-gray-200 shadow-sm gap-6 sm:my-20 my-10">
-      <div className="sm:flex-shrink-0 border-1 border-gray-700 rounded-xl shadow-lg shadow-gray-800 h-60 w-auto sm:w-50 sm:h-auto overflow-hidden">
+      <div className="sm:flex-shrink-0 border-1 border-gray-700 rounded-xl shadow-lg shadow-gray-800 h-60 w-auto sm:w-50 sm:h-auto mt-10 sm:mt-0 overflow-hidden">
         <img
           src="/np-photo-tint.png"
           alt="Profile"

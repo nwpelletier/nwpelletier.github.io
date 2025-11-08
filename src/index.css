@@ -4,6 +4,7 @@ body {
     BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
     sans-serif;
   font-optical-sizing: auto;
+  overflow-x: hidden;
 }
 
 body p,
@@ -15,8 +16,12 @@ a {
   text-shadow: 1px 1px 6px rgb(66, 66, 66);
 }
 
+html {
+  overflow-x: hidden;
+}
+
 .navbar {
-  position: relative;
+  position: fixed;
 }
 .navbar::after {
   position: absolute;
@@ -33,7 +38,7 @@ a {
     rgba(255, 255, 255, 0.062) 75%,
     transparent 100%
   );
-  animation: move-bar 24s linear infinite;
+  animation: move-bar 18s linear infinite;
 }
 
 @keyframes move-bar {
